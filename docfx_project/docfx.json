@@ -1,0 +1,98 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "marketplace/**.md",
+          "marketplace/toc.yml",
+          "resources/**.md",
+          "toc.yml",
+		  "apis/toc.yml",
+          "apis/**.md",
+		  "apis/**/**.md",
+		  "apis/psd2/**.md",
+		  "apis/psd2/**.swagger.json",
+		  "main/**.md",
+          "main/toc.yml",
+		  "faq/**.md",
+          "faq/toc.yml",
+		  "interaction/toc.yml",
+          "interaction/**.md",
+		  "integration/toc.yml",
+          "integration/**.md",
+		  "quickstart/**.md",
+          "quickstart/toc.yml",
+		  "design/toc.yml",
+          "design/**.md",
+          "design/uxp/toc.yml",
+          "design/uxp/**.md",
+          "design/ds/toc.yml",
+          "design/ds/**.md",
+		  "banking/**.md",
+          "banking/toc.yml",
+          "banking/corebanking/**.md",
+          "banking/corebanking/toc.yml",
+          "banking/**/toc.yml",
+          "banking/**/**.md",
+          "**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [
+        {
+          "files": [
+			"myscripts/**",
+            "images/**",
+            "resources/images/**",
+            "marketplace/images/**",
+            "google6fa4aa0de1992308.html",
+            "sitemap.xml",
+            "robots.txt",
+            "pdf/**",
+			"api/**",
+			"main/images/**",
+			"faq/images/**",
+            "interaction/images/**",
+			"integration/images/**",
+			"quickstart/images/**",
+			"banking/images/**",
+            "design/uxp/images/**",
+			"banking/images/**",
+			"apis/provider-apis/**-swagger.json",
+			"swagger-ui/**",
+			"pdf/**"
+          ],
+          "exclude": [
+            "obj/**",
+            "_site/**"
+          ]
+        }
+      ],
+	  "globalMetadata": 
+	{
+      "_disableContribution": true
+    },
+      "dest": "_site",
+      "globalMetadataFiles": [],
+      "fileMetadataFiles": [],
+	  "fileMetadata": {
+	     "_noindex": {
+			"marketplace/sandbox-comparison.md": true
+	     }
+	  },
+      "template": [
+		"temenos",
+        "wide/src",
+		"plugins/rest.tagpage.2.22.1/content", 
+		"plugins/rest.operationpage.2.22.1/content"
+      ],
+      "postProcessors": ["ExtractSearchIndex"],
+      "noLangKeyword": false,
+      "keepFileLink": false,
+      "cleanupCacheHistory": false
+    }
+  }

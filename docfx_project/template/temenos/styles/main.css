@@ -1,0 +1,35 @@
+.contribution li i {
+	color: #337ab7;
+	display: inline-block;
+}
+
+.contribution li:hover i {
+	color: #e37808;
+}
+
+.contribution li a {
+	display: inline-block !important;
+}
+
+.comment-icon:before {
+	font-family: fontawesome;
+	content: "\f27b";
+	padding-right: 2px;
+}
+
+#shareEmail {
+	display: none !important;
+}
+
+body {
+  word-wrap: break-word;
+}
+
+td {
+  white-space: normal !important; 
+  word-wrap: break-word;  
+}
+table {
+  table-layout: fixed;
+}
+

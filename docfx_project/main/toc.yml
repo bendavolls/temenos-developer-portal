@@ -1,0 +1,22 @@
+- name: Connect your App
+  href: connect-app.md
+  items:   
+    - name: Invoke APIs
+      href: connect-app.md#invoke-apis
+    - name: Configure T24
+      href: connect-app.md#configure-t24
+      items:   
+        - name: Login to BrowserWeb
+          href: login-t24.md
+        - name: Create Customer
+          href: customer.md
+        - name: Create Accounts
+          href: accounts.md
+        - name: Cash Deposits
+          href: teller.md
+        - name: Create external user
+          href: external-user.md
+        - name: Login to Internet Banking
+          href: login-retail.md
+- name: Events and Notifications
+  href: events-notifications.md

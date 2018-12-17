@@ -1,0 +1,21 @@
+- name: Overview
+  items:
+  - name: Introduction
+    href: index.md
+  - name: Who Can Join?
+    href: who-can-join.md
+  - name: What Do You Get?
+    href: what-do-you-get.md   
+  - name: FAQ
+    href: faq.md 
+  - name: Join Marketplace
+    href: join.md
+
+- name: Resources
+  items:
+  - name: Technical
+    href: technical.md
+  - name: Business
+    href: business.md
+  - name: Marketing
+    href: marketing.md

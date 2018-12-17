@@ -1,0 +1,38 @@
+- name: Overview
+  href: index.md
+- name: Temenos UXP
+  items:
+  - name: Introduction
+    href: uxp/index.md
+  - name: Architecture
+    href: uxp/architecture.md
+  - name: Reference
+    href: uxp/reference.md
+  - name: UXP Setup
+    href: uxp/uxp-setup.md
+  - name: Widgets 3 Minute Guide
+    href: uxp/widgets-3-minute.md
+  - name: Widgets 30 Minute Guide
+    href: uxp/widgets-30-minute.md
+  - name: Widgets 3 Hour Guide
+    href: uxp/widgets-3-hour.md    
+
+- name: Design Studio
+  items:
+  - name: Introduction
+    href: ds/index.md
+  - name: Architecture
+    href: ds/architecture.md
+  - name: Reference
+    href: ds/reference.md
+  - name: Getting Started
+    href: ds/getting-start.md
+
+- name: Resources
+  items:
+  - name: Sample Widgets
+    href: example.md
+  - name: FAQ
+    href: faq.md
+  - name: Glossary
+    href: glossary.md

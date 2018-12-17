@@ -1,0 +1,38 @@
+- name: Overview
+  items:
+  - name: Introduction
+    href: index.md
+
+- name: Core Banking
+  items:
+  - name: Introduction
+    href: introduction.md
+  - name: Architecture
+    href: architecture.md
+  - name: Reference
+    href: reference.md
+
+- name: Channels
+  items:
+  - name: Introduction
+    href: channels.md
+  - name: Internet
+    href: internet_banking.md
+  - name: Mobile
+    href: mobile_banking.md
+
+- name: Technical Guide
+  items:
+  - name: Learn Basics
+    href: basics.md
+  - name: Internet Banking
+    href: internet_api.md
+  - name: Mobile Banking
+    href: mobile_api.md
+
+- name: Resources
+  items:
+  - name: FAQ
+    href: faq.md
+  - name: Glossary
+    href: glossary.md

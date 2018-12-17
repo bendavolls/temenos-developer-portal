@@ -1,2 +1,2 @@
-# temenos-developer-portal2-
-Clone of temenos-developer-portal that is removed.
+# Temenos Developer Portal (PROD)
+A GitHub Pages project (https://pages.github.com/) for the Temenos Developer Portal.  http://developer.temenos.cloud/

@@ -1,0 +1,25 @@
+- name: CONNECT YOUR APP
+  href: main/connect-app.md
+- name: PUBLISH YOUR APP
+  href: marketplace/index.md
+- name: FAQs
+  href: faq/index.md
+- name: GET HELP
+  href: https://developerforum.temenos.com/
+#- name: READ API DOCs
+#  href: apis/index.md
+#- name: TEST APIs
+#  href: https://api.temenos.com/
+#- name: VISIT FORUM
+#  href: https://developerforum.temenos.com/
+#- name: PUBLISH YOUR APP
+#  href: https://marketplace.temenos.com/
+#- name: FAQs
+#  href: faq/index.md
+#- name: CONTACT US
+#  href: main/contact-us.md
+#- name: MARKETPLACE
+# href: https://marketplace.temenos.com/home
+#- name: API
+#  href: https://marketplace.portal.azure-api.net/docs/services/
+

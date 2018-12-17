@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://developer.temenos.com/</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/index.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/design/index.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/integration/index.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/interaction/index.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/resources/sandbox.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/design/ds/index.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/design/uxp/index.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+  <url>
+    <loc>http://developer.temenos.com/design/uxp/architecture.html</loc>
+    <lastmod>2017-12-05</lastmod>
+  </url>
+</urlset>
+<!--<guid value="9428414e-1760-429b-8de5-53e3faf2f42d" />-->
+<!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->

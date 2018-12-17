@@ -1,0 +1,2 @@
+>[!Note]
+> Temenos' Integration offering makes banks more agile, by enabling them to integrate systems much faster and more cost-efficiently, and to become more competitive by enabling near real-time, highly scalable, self-assisted and multi-channel banking 24/7.

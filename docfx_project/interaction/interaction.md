@@ -1,0 +1,3 @@
+>[!Note]
+> Open up your banking platform to accelerate the pace of innovation around your services.
+Temenos' Interaction offering accelerates the pace of innovation around banks' services, by enabling them to easily expose their services to innovation partners and to any user-interface (UI). It also lets the bank create innovative combined services and efficiently manage UIs across multiple channels/devices/roles/languages.

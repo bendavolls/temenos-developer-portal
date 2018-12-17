@@ -1,0 +1,45 @@
+- name: Overview
+  href: index.md
+  items:
+  - name: Introduction
+    href: index.md
+  - name: Architecture
+    href: architecture.md
+  - name: IRIS & RIM
+    href: iris.md
+  - name: Data Service Designer
+    href: data_service_designer.md    
+  - name: Reference
+    href: reference.md
+
+- name: Integration Guide
+  items:
+  - name: Learn Basics
+    href: basics.md
+  - name: 3 Minute Guide
+    href: 3-minutes.md
+  - name: 30 Minute Guide
+    href: 30-minutes.md
+  - name: 3 Hours Guide
+    href: 3-hours.md
+  - name: Mashup Guide
+    href: 3-hours.md
+
+- name: Resources
+  items:
+  - name: Banking API
+    items: 
+    - name: Episode 1
+      href: episode1.md
+    - name: Episode 2
+      href: episode2.md
+    - name: Episode 3
+      href: episode3.md
+    - name: Episode 4
+      href: episode4.md
+    - name: Episode 5
+      href: episode5.md
+  - name: FAQ
+    href: faq.md
+  - name: Glossary
+    href: glossary.md

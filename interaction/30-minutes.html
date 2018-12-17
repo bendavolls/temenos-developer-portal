@@ -1,0 +1,342 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Temenos Interaction Framework - 30 Minutes </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Temenos Interaction Framework - 30 Minutes ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Temenos Interaction Framework - 30 Minutes ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="create-temenos-api">Create Temenos API</h1>
+
+<p>By using Temenos Sandbox and Developer package, you can create your new APIs and publish them on the MarketPlace web site. This document will guide you step-by-step to create an API in 30 minutes.</p>
+<h1 id="introduction">Introduction</h1>
+<p><a href="glossary.html#iris">IRIS</a> is an open source GitHub project and provides Interaction, Reporting and Information Services. This project is developed and maintained by Temenos.</p>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>To build an IRIS data service, you need to meet the following requirements:</p>
+<ul>
+<li>Knowledge of Web technologies</li>
+<li>Knowledge of <a href="glossary.html#odata">OData</a> &amp; <a href="glossary.html#rest">RESTful services</a></li>
+<li>Temenos MarketPlace Products<ul>
+<li><a href="../marketplace/sandbox.html">Temenos Sandbox</a></li>
+<li>Temenos Design Studio</li>
+</ul>
+</li>
+<li>Microsoft Windows operating system (Windows 7 or higher) &amp; Internet connection</li>
+<li>Access to <a href="https://github.com/temenostech">GitHub</a> platform </li>
+</ul>
+<p>Also, please follow this <a href="3-minutes.html">3 minutes user guide</a>.</p>
+<h1 id="environment-setup">Environment Setup</h1>
+<p>Download Temenos Design Studio from My Apps section of Temenos MarketPlace and extract files from the Temenos Design Studio (or your current version) to a directory on your computer. Make sure your path does not contain any spaces or special character.</p>
+<h2 id="download-prospect-iris-project">Download Prospect-IRIS project</h2>
+<ul>
+<li><p>You need to have GitHub account in order to download the default Prospect project. Click here <a href="https://github.com/join">Join GitHub</a>, if you don&#39;t have GitHub account </p>
+</li>
+<li><p>Install Git on your local machine  - <a href="https://git-scm.com/download">Git</a></p>
+</li>
+<li><p>After installation of Git, fork the Prospect-iris, to fork the project go to <a href="https://github.com/temenostech/Prospect-IRIS">https://github.com/temenostech/Prospect-IRIS</a>. </p>
+</li>
+<li><p>There are 2 options: either fork or <strong>download</strong> Prospect-IRIS</p>
+</li>
+<li><p>Go to clone or download button and choose download</p>
+</li>
+</ul>
+<p>Create a folder inside GitHub folder. In current example is named: Prospect-IRISc. Copy the downloaded and extracted ZIP into the newly created folder. Now you have This is what the folder contains:</p>
+<p><img src="images/prospect-iris-folder.png" alt="prospect iris folder"></p>
+<div class="NOTE"><h5>Note</h5><p>Please use <strong><em>Prospect-IRIS</em></strong> only if you have <strong><em>DesignStudio 201711</em></strong>, with any other version the build will fail. In case you have a different version of DesignStudio then, instead of using Prospect-IRIS project you should create an <strong><em>IRIS Data Service Project</em></strong>, remove whatever is coming by default and follow the other instructions present on this page.</p>
+</div>
+<h2 id="design-studio-environment">Design Studio environment</h2>
+<ul>
+<li><p>Open Design Studio and provide the workspace name
+<img src="images/workspace.png" alt="workspace"></p>
+</li>
+<li><p>Go to <strong>File</strong> - <strong>Import</strong> - than choose <strong>Existing Maven Projects</strong>
+<img src="images/existing-maven-project.png" alt="maven project"></p>
+</li>
+<li><p>Now select the root directory as the path where your Prospec-IRIS folder was created and press <strong>Finish</strong>
+<img src="images/set-directory.png" alt="set root directory"></p>
+</li>
+<li><p>Wait until the project is completely updated.</p>
+</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to save each change (CTRL+S)</p>
+</div>
+<ul>
+<li><p>After updating all 4 projects, click right on Package explorer and choose <strong>Maven</strong> &gt; <strong>Update Project</strong>.
+<img src="images/update-maven-project.png" alt="update maven project"></p>
+</li>
+<li><p>In the new window, uncheck Offline button and choose <strong>Force Update of Snapshots/ Releases</strong>
+<img src="images/force-update.png" alt="force update"></p>
+</li>
+</ul>
+<h2 id="import-prospect-server">Import Prospect-server</h2>
+<p><strong>Prospect server is responsible to communicate with Temenos Sandbox</strong></p>
+<ul>
+<li><p>Go to <strong>File</strong> &gt; <strong>Import</strong> &gt; then select <strong>Existing Projects into Workspace</strong>
+<img src="images/existing-projects.png" alt="projects"></p>
+</li>
+<li><p>Click <strong>Next</strong> and then select the root directory (Insert the path where your Prospect server folder is located). Then click <strong>finish</strong>
+<img src="images/prospect-server.png" alt="prospect server"></p>
+</li>
+<li><p>Prospect-server will appear updated now under Package Explorer, along with the other existing projects.</p>
+</li>
+</ul>
+<h2 id="build-the-prospect-iris-project">Build the Prospect-IRIS project</h2>
+<ul>
+<li><p>Go to <strong>Prospect-dataService</strong>, right click on <strong>Package.launch</strong> and choose <strong>Run as package</strong>
+<img src="images/package-launch.png" alt="package launch"></p>
+</li>
+<li><p>Wait for the build to be completed. In the Console tab, you should get [INFO] BUILD SUCCESS </p>
+</li>
+<li><p><strong>Prospect-iris.war</strong> file will be generated that can be taken and deployed
+<img src="images/prospect-iris-war.png" alt="prospect iris war"></p>
+</li>
+</ul>
+<h2 id="connect-prospect-with-the-sandbox">Connect Prospect with the Sandbox</h2>
+<p>In order to establish the connection with Temenos Sandbox:</p>
+<ul>
+<li><p>Expand the *-server project and double click the server.properties file.</p>
+</li>
+<li><p>Enter the user name, password, host name and port number. You can get these details from your Temenos Sandbox.
+<img src="images/server-config.png" alt="server config"></p>
+</li>
+<li><p>Start the server: click the <strong>Servers</strong> tab, right-click <strong>T24 Connection</strong> and click <strong>Start</strong> (or <strong>Restart</strong>)
+<img src="images/server-start.png" alt="server start"></p>
+</li>
+<li><p>State will change into <strong>Active</strong></p>
+</li>
+</ul>
+<h2 id="import-enquiries-or-versions">Import enquiries or versions</h2>
+<ul>
+<li><p>On the top menu, click <strong>File</strong> &gt; <strong>Import</strong></p>
+</li>
+<li><p>A new window appears. Here, expand Design Studio, click <strong>Import T24 Enquiries</strong> and then click <strong>Next</strong>
+<img src="images/import-enquiries.png" alt="import enquiries"></p>
+</li>
+<li><p>Select the enquiry you want to add to your project.
+<img src="images/select-enquiry.png" alt="select enquiry"></p>
+</li>
+<li><p>Save this enquiry in the enquiry folder of the <em>-models project. Click **Finish</em>*
+<img src="images/save-enquiry.png" alt="save enquiry"></p>
+</li>
+<li><p>A success message is displayed. Click OK to close this message.</p>
+</li>
+<li><p>The enquiry is your *-models project.
+<img src="images/enquiry-added.png" alt="enquiry"></p>
+</li>
+</ul>
+<h2 id="create-a-rimrimmd-file">Create a <a href="rim.html">RIM</a> file</h2>
+<p>To create a RIM file:</p>
+<ul>
+<li><p>Right-click the imported enquiry.</p>
+</li>
+<li><p>In the context menu, click <strong>Design Studio</strong> and then click <strong>Generate Code</strong>.</p>
+</li>
+<li><p>Result: The enqCURRENCY-LIST.rim file has been generated in the following directory:
+*-models\rim\gen\T24\enqCURRENCY-LIST.rim
+<img src="images/create-rim-file.png" alt="create rim"></p>
+</li>
+</ul>
+<h2 id="add-the-enquiry-to-the-service-documentservicedocumentmd">Add the enquiry to the <a href="service_document.html">Service Document</a></h2>
+<ul>
+<li><p>The last step in creating your API is to add the RIM definition to the service document. The service document is in the following directory:
+*-models project\rim\project_name\project_name.rim
+<img src="images/prospect-rim.png" alt="prospect rim"></p>
+</li>
+<li><p>Double click the rim file with your project name, for example Prospect.rim. The contents of the file are displayed in the right pane.
+<img src="images/prospect-iris-enquiry.png" alt="prospect iris enquiry"></p>
+</li>
+<li><p>Add the newly created RIM reference in the Service Document resource. Make sure you follow the correct sequence: <strong>Domain Name</strong> &gt; <strong>RIM Name</strong> &gt; <strong>Resource Name (Collection)</strong></p>
+<p>Example:</p>
+<p>T24.enqPctCurrency.enqPctCurrency
+<img src="images/add-new-enquiry.png" alt="new enquiry"></p>
+</li>
+</ul>
+<h2 id="verifying-the-new-link-in-the-service-documentservicedocumentmd">Verifying the new link in the <a href="service_document.html">Service Document</a></h2>
+<ul>
+<li><p>Make sure that you are able to navigate from the Service Document to the newly added rim file. To test the link, control-click the new resource definition. You should be able to go the <strong>enqPctCurrency</strong> resource.
+<img src="images/check-resource.png" alt="check resource"></p>
+</li>
+<li><p>Rebuild your data service. Go to <strong>Prospect-dataService</strong> &gt; <strong>Package.launch</strong> &gt; <strong>Run As</strong> &gt; <strong>Package</strong>
+<img src="images/build-success.png" alt="build success"></p>
+</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

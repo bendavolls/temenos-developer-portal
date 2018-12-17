@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UXP 3 Minute Guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UXP 3 Minute Guide ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="UXP 3 Minute Guide ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>This is a short guide to explain what you can develop through UXP and how to use a simple Widget.</p>
+<h1 id="development">Development</h1>
+<p>What you can develop by using UXP solution?</p>
+<p>Here&#39;s a description of a simple business problem:</p>
+<p>A car part supplier needs to capture client data for billing purposes. If the client wishes to pay by account, the supplier also needs to capture and check the clients’ credit details. This data needs to be collected either by call centre staff or by company representatives on sales visits. The clients themselves may also supply this data via the supplier’s website.</p>
+<div class="NOTE"><h5>Note</h5><p>The solution can be checked in the User Guide that comes with your package, under Getting started section.</p>
+<p>Also, you can see the entire flow in the <a href="widgets-3-hour.html"><strong>Widgets 3 Hour Guide</strong></a>. </p>
+</div>
+<h2 id="use-a-widget">Use a Widget</h2>
+<ul>
+<li>Go to Presentation editor, expand the buttons, click on Phase1 &gt; Add &gt; Display Item &gt; TestWidget: </li>
+</ul>
+<p><img src="images/display-item.png" alt="widget"></p>
+<ul>
+<li>Give a name in the Item Name field. (We named this project &#39;<em>FirstTestWidget</em>&#39;)</li>
+<li>Click OK.</li>
+</ul>
+<p>Now we have added a widget which has currently no functionality.</p>
+<ul>
+<li>To add a functionality to it, go to Tools &gt; Edit Widgets for Project &gt; Click right on Widget (TestWidget) &gt; Add &gt; Custom Attributes<ul>
+<li>Under Custom Attributes &gt; click on Attribute and fill the field Name which is mandatory, then click Save. </li>
+</ul>
+</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>This field is very important and we must be careful when choosing the name of the attribute, because it will be called in the code. For example, if we want a &#39;Hello World&#39; kind of attribute, we can name it as <em>Message</em> </p>
+</div>
+<ul>
+<li>To check what has been created, go to Presentation Editor &gt; Double click on FirstTestWidget [TestWidget] &gt; Go to Widget Details tab <ul>
+<li>In the Message field, you can type <em>&#39;Hello World&#39;</em> (<em>any message you want to use</em>) and click OK.</li>
+</ul>
+</li>
+<li>To run the project, go to Presentation Editor &gt; Click right on Presentation Editor &gt; Run</li>
+</ul>
+<p>The new screen will not display anything related to the widget built before. In order to see the changes, modify Body and Header content.</p>
+<h3 id="body-template-content">Body Template Content</h3>
+<ul>
+<li>To be able to see &#39;Hello World&#39; message, go to Templates folder in order to modify <strong><em>body.wgt</em></strong> file. </li>
+<li><p>Edit <strong><em>body.wgt</em></strong> with the below HTML command, in order to acces the Custom Attribute previously added:</p>
+<pre><code>  &lt;div&gt;
+  $$ITEM.Message$
+  &lt;/div&gt;
+</code></pre></li>
+<li><p>Save the change into <strong><em>body.wgt</em></strong> file and run again the Presentation Editor. </p>
+<ul>
+<li>You will see now displayed &#39;Hello World&#39; message.</li>
+</ul>
+</li>
+</ul>
+<h3 id="header-template-content">Header Template Content</h3>
+<div class="TIP"><h5>Tip</h5><ul>
+<li><p>You need to include any external javascript libraries/files e.g. jquery and external css files in the header template. </p>
+</li>
+<li><p>You should also add javascipt/css used by the widget. </p>
+</li>
+<li><p>You should try to include any script required by the widget in the header file, if possible, as each header is only included once in the page regardless of how many times the widget is used in the page.</p>
+</li>
+</ul>
+</div>
+<p>Add jQuery script version on <em>**head.wgt</em>*</p>
+<pre><code>    &lt;script src=&quot;http://code.jquery.com/jquery-1.12.4.min.js&quot; integrity=&quot;sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+</code></pre><ul>
+<li><p>Go back to <strong><em>body.wgt</em></strong> and edited according to the changes you need to make. Here is a small example:</p>
+<pre><code>   &lt;div id=&quot;testID&quot;&gt;
+   $$ITEM.Message$
+   &lt;/div&gt;
+   &lt;script&gt;
+      $(&quot;#testID&quot;).css(&quot;color&quot;, &quot;red&quot;);
+   &lt;/script&gt;
+</code></pre></li>
+</ul>
+<pre><code>  Address use in current example : http://localhost:8181/TestWgt/servletcontroller
+  When the screen is refreshed, Hello World message will appear in red
+</code></pre><div class="NOTE"><h5>Note</h5><p>For more features regarding Widgets, please check also <a href="widgets-30-minute.html"><strong>Widgets 30 minute guide</strong></a> and Widgets Developers Guide available in the UXP package. </p>
+</div>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

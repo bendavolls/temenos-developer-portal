@@ -1,0 +1,400 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content=" ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class=" ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width">
+
+<style>
+h1, h2, h3, h4 {
+    color:#005294; 
+    border-bottom: 1px solid #eee
+}
+
+a { color: #005294;}
+nav a { color: #fff;}
+td {
+    width: 50%;
+    vertical-align: top;
+}
+
+table {
+    border: 0;
+}
+
+</style>
+</head>
+<body>
+    <div id="wrapper">
+
+The Temenos Provider APIs expose Temenos product business capabilities as RESTful (Representational state transfer) APIs defined in the OpenAPI Specification (OAS). The provider APIs are semantically versioned and the Temenos Interaction Framework (IRIS) product allows a single provider API to be mapped to pre-defined, publicly exposed APIs that implement standard API definitions e.g. Open Banking API, Berlin group, STET etc.
+<br>The Temenos Provider APIs are grouped into the top-level business domains as below
+
+<section>
+<div class="container-fluid">
+        <div class="row"><br>            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Party</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/party-customers-service-v1.0.0-swagger.json'>customers</a><p>Allows the creation, viewing and management of customers. This includes associated information such as their address, custom fields and identification documents. It is also possible to search for customers by various criteria.</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/party-customers-documents-service-v1.0.0-swagger.json'>customers-documents</a><p>Allows the creation, viewing and management of customer documents and images.</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/party-customers-messages-service-v1.0.0-swagger.json'>customers-messages</a><p>Allows the creation, viewing and management of messages to and from customers.</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+            </div>
+                    </div>
+
+                    <div class="row"><br>            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Product</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-productConditions-service-v1.0.0-swagger.json'>productConditions</a><p>Retrieves product condition information</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-productGroups-service-v1.0.0-swagger.json'>productGroups</a><p>Retrieves product group information that is used by the legal entity</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-products-service-v1.0.0-swagger.json'>products</a><p>Retrieves product information, either as a full catalog or by product line and / or product group</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-projects-service-v1.0.0-swagger.json'>projects</a><p>Allows the creation, viewing and management of product builder projects to create and publish products</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-properties-service-v1.0.0-swagger.json'>properties</a><p>Retrieves product property information, used in building products</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-productLines-service-v1.0.0-swagger.json'>productLines</a><p>Retrieves product line information that is used by the legal entity</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/product-interestConditions-service-v1.0.0-swagger.json'>interestConditions</a><p>Retrieves interest condition information for products, groups and lines</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                        </div>
+                    </div>
+
+                <div class="row"><br>            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Holdings</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-accounts-service-v1.0.0-swagger.json'>accounts</a><p>Retrieves balances, cards and transaction information on accounts</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-arrangements-service-v1.0.0-swagger.json'>arrangements</a><p>Retrieves balances and transaction information for all products except accounts</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-customers-service-v1.0.0-swagger.json'>customers</a><p>Retrieves balances and transaction information for a customer&#39;s accounts and arrangements</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-instruments-service-v1.0.0-swagger.json'>instruments</a><p>Retrieves position information for a legal entities own book portfolios</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-limits-service-v1.0.0-swagger.json'>limits</a><p>Retrieves limit information for a customer, and allows checking and managing limits utilized by a party.</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-nostros-service-v1.0.0-swagger.json'>nostros</a><p>Retrieves Nostro position information for the legal entity</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-portfolios-service-v1.0.0-swagger.json'>portfolios</a><p>Retrieves valuation, holdings and transaction information on portfolios</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-reports-service-v1.0.0-swagger.json'>reports</a><p>Retrieves various named holdings reports by customer and account / arrangement</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-treasury-currencies-service-v1.0.0-swagger.json'>treasury-currencies</a><p>Retrieves currency position information for the legal entity</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/holdings-treasury-currencyPairs-service-v1.0.0-swagger.json'>treasury-currencyPairs</a><p>Retrieves currency pair position information for the legal entity</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                            </div>
+                    </div>
+
+                <div class="row"><br>            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Orders</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-derivativeOrders-service-v1.0.0-swagger.json'>derivativeOrders</a><p>Allows the creation, viewing and management of derivative orders</p></td><br>                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-forexOrders-service-v1.0.0-swagger.json'>forexOrders</a><p>Allows the creation, viewing and management of forex orders</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-paymentOrders-service-v1.0.0-swagger.json'>paymentOrders</a><p>Allows the creation, viewing and management of payment orders</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-payments-service-v1.0.0-swagger.json'>payments</a><p>Allows the creation, viewing and management of payments and transfers</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-paymentStops-service-v1.0.0-swagger.json'>paymentStops</a><p>Allows the creation, viewing and management of payment stop requests. Also enables blocking and activation of cards.</p></td><br>                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-securityOrders-service-v1.0.0-swagger.json'>securityOrders</a><p>Allows the creation, viewing and management of security orders</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/order-securityTransferOrders-service-v1.0.0-swagger.json'>securityTransferOrders</a><p>Allows the creation, viewing and management of security transfer orders</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                            </div>
+                </div>
+
+
+                <div class="row"><br>            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Meta</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/meta-apis-service-v1.0.0-swagger.json'>apis</a><p>Retrieves information about the API ecosystem, both reference information and runtime metrics</p></td><br>                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/meta-queries-service-v1.0.0-swagger.json'>queries</a><p>Allows the creation, viewing and management of query definitions</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/meta-screens-service-v1.0.0-swagger.json'>screens</a>
+                                    <p>Allows the creation, viewing and management of screen definitions</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/meta-tables-service-v1.0.0-swagger.json'>tables</a><p>Allows the viewing of table definitions</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                         </div>
+                </div>
+
+                <div class="row"><br>            <div class="col-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Reference</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-balanceTypes-service-v1.0.0-swagger.json'>balanceTypes</a><p>Retrieves human readable descriptions of balance types</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-brokers-service-v1.0.0-swagger.json'>brokers</a><p>Retrieves the brokers that are used by the organization</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-companies-service-v1.0.0-swagger.json'>companies</a><p>Retrieves the legal entity information that is used by the organization</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-countries-service-v1.0.0-swagger.json'>countries</a><p>Retrieves the country information that is used by the legal entity, either a list of countries or a specific country by ISO 3166-1 alpha-2 code.</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-currencies-service-v1.0.0-swagger.json'>currencies</a><p>Retrieves the currency information that is used by the legal entity, either a list of currencies or a specific currency by ISO 4217 code.</p></td><br>                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-dates-service-v1.0.0-swagger.json'>dates</a><p>Retrieves the working day information that is used by the organization, either a list for all legal entities or for a specific legal entity.</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-interestBases-service-v1.0.0-swagger.json'>interestBases</a><p>Retrieves the interest bases information that is used by the legal entity</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-periodDates-service-v1.0.0-swagger.json'>periodDates</a><p>Retrieves periodic interest information that is used by the legal entity</p></td>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-rateTexts-service-v1.0.0-swagger.json'>rateTexts</a><p>Retrieves human readable descriptions of interest conditions</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-treasury-service-v1.0.0-swagger.json'>treasury</a><p>Retrieves treasury configuration that is used by the legal entity</p></td>
+
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/reference-treasury-dealers-service-v1.0.0-swagger.json'>treasury-dealers</a><p>Retrieves the dealers that are used by the organization</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                       </div>
+                </div>
+
+                <div class="row"><br>            <div class="col-12">
+               <div class="row">
+                    <div class="col-md-12">
+                        <h4>PSD2</h4>
+                        <table class="table table-striped">
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/PSD2-accounts-v1.0.0-swagger.json'>accounts</a><p>These APIs are used to get the account information.</p></td><br>                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/PSD2-funds-transfer-v1.0.0-swagger.json'>fundsTransfer</a><p>These APIs are used to create and get FundsTransfer records.</p></td>
+                            </tr>
+                            <tr>
+                                <td><a href='/swagger-ui/index.html?url=/apis/provider-apis/PSD2-payments-v1.0.0-swagger.json'>payments</a>
+                                    <p>These APIs are used to create and get the PaymentOrder records.</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section></div>
+
+</body>
+</html><p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Integration 3 minutes guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Integration 3 minutes guide ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Integration 3 minutes guide ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="integration-events--3-minutes-guide">Integration Events – 3 Minutes Guide</h1>
+
+<p>This is a short guide which will explain how to see the Integration Events in ReST client.</p>
+<p>In this example we will fetch the events for FUND TRANSFER. 
+We already created an Integration Project and published to T24:</p>
+<ul>
+<li>Project Name: Demo</li>
+<li>Event Name: FTDemo.event</li>
+<li>Event Type: Demo-FTDemo</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li><p>Temenos Sandbox</p>
+</li>
+<li><p>Google Chrome browser – Download from <a href="https://www.google.co.uk/chrome/browser/desktop/" title="Chrome">here</a></p>
+</li>
+<li><p>POSTMAN chrome extension </p>
+<ul>
+<li>Either search POSTMAN ReST client on Google OR</li>
+<li>click this <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en" title="Postman">link</a> </li>
+</ul>
+</li>
+</ul>
+<h2 id="access-the-data-service">Access the Data Service</h2>
+<p>The Temenos Sandbox already has one Data Service that will fetch the events from T24</p>
+<p>To learn how to fetch the data from T24 using ReST client, please follow this <a href="../interaction/3-minutes.html">3 minutes guide</a>.</p>
+<ul>
+<li>API Name to access events data: /enqIntegrationEventss()</li>
+<li>Data Service Name: <a href="http://127.0.0.1:9089/Prospect-iris/Prospect.svc/GB0010001/">http://127.0.0.1:9089/Prospect-iris/Prospect.svc/GB0010001/</a></li>
+<li>Filters: ?$filter=substringof(‘Demo’, EventType) or ?$filter=EventType eq ‘Demo-FTDemo’</li>
+<li>Complete URL: <a href="http://127.0.0.1:9089/Prospect-iris/Prospect.svc/GB0010001/enqIntegrationEventss()?$filter=substringof(&#39;Demo">http://127.0.0.1:9089/Prospect-iris/Prospect.svc/GB0010001/enqIntegrationEventss()?$filter=substringof('Demo</a>&#39;, EventType)</li>
+</ul>
+<p>If we don’t provide the filter, it will fetch all the events from T24 and slow down the POSTMAN. Therefore the best practice is to fetch only the events in which you are interested. </p>
+<p>Follow this post if you want to know more about filters – IRIS Data Service &amp; OData Filters</p>
+<p>Now we are going to query to T24 for event type Demo-FTDemo by GET method on above mentioned data service:</p>
+<p>e.g. /Prospect-iris/Prospect.svc/GB0010001/enqIntegrationEventss()?$filter=EventType eq ‘Demo-FTDemo’</p>
+<p>We will GET following Response – This response is empty because there is no transaction after creating this event.</p>
+<p><img src="images/events-api.png" alt="events API"></p>
+<h2 id="initiate-fundstransfer">Initiate FUNDS.TRANSFER</h2>
+<p>Now login to T24, initiate a FUNDS.TRANSFER and commit the deal in T24</p>
+<div class="NOTE"><h5>Note</h5><p>Don&#39;t forget to use <strong>comma</strong></p>
+<p><img src="images/initiate-ft.png" alt="initiate funds transfer"></p>
+</div>
+<p><img src="images/funds-transfer.png" alt="funds transfer"></p>
+<h2 id="see-the-events-data">See the events data</h2>
+<p>Now follow the same steps done previously in order to fetch the events data. Open POSTMAN and GET request on /enqIntegrationEventss() resource</p>
+<p>e.g. GET <a href="http://127.0.0.1:9089/Prospect-iris/Prospect.svc/GB0010001/enqIntegrationEventss()?$filter=substringof(&#39;Demo">http://127.0.0.1:9089/Prospect-iris/Prospect.svc/GB0010001/enqIntegrationEventss()?$filter=substringof('Demo</a>&#39;, EventType)</p>
+<p>Response from above request is the following:</p>
+<p><img src="images/events-api-response.png" alt="events api response"></p>
+<p>In the response we can see event type and other useful information:</p>
+<p>&lt;d:EventType&gt;Demo-FTFlow&lt;/d:EventType&gt;</p>
+<p>and also the T24 Application name</p>
+<p>&lt;d:CommonXmlVal&gt;FUNDS.TRANSFER&lt;/d:CommonXmlVal&gt;</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

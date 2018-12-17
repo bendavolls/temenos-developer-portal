@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Connect Your App with Temenos </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Connect Your App with Temenos ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Connect Your App with Temenos ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="your-integration-project-starts-here">Your integration project starts here</h2>
+
+<p>As a MarketPlace Member, you have access to the MarketPlace Provider Sandbox, to help build, test and demonstrate your product&#39;s integration to the Temenos T24 backend (our Customers).<br>
+The MarketPlace Provider Sandbox offers a live instance of T24, complete with model bank data, running on a secure virtual machine. Connect your product to show off its unique features and benefits in a live demonstration, right from your Product Page on the Temenos MarketPlace. </p>
+<h1 id="welcome-email">Welcome email</h1>
+<p>New MarketPlace Providers are sent a welcome email, containing links to the following MarketPlace Provider Support tools/services:</p>
+<ul>
+<li><p>Provider Tools available via MarketPlace</p>
+</li>
+<li><p>The MarketPlace Provider Sandbox (with Sign-in details)</p>
+</li>
+<li><p>Retail Internet Banking Application installation guide</p>
+</li>
+<li><p>The API Portal to call and test the current public Temenos APIs</p>
+</li>
+<li><p>The Support Forum, where you can read and post technical questions</p>
+</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>If you have not yet received your welcome email or need it to be re-sent, please <a href="mailto:marketplace@temenos.com" target="_top">let us know</a>.</p>
+</div>
+<h1 id="how-can-i-interact-with-the-sandbox">How can I interact with the Sandbox?</h1>
+<h2 id="invoke-apis">Invoke APIs</h2>
+<p>The sandbox exposes a series of REST APIs that can be invoked in order to create, read and/or update records in it. Some of the available functionalities of these APIs are:</p>
+<ul>
+<li>retrieving account details like available balance, transaction history, etc.</li>
+<li>creating Payments and retrieving list of payments</li>
+<li>creating fund transfer payments and SEPA payments, retrieving details of a fund transfer, etc.
+Please check the <a href="../apis/index.html">API documentation</a> section for more details.</li>
+</ul>
+<h2 id="configure-t24">Configure T24</h2>
+<p>The sandbox is also exposing an user interface, a BrowserWeb URL, that is allowing you to directly access the T24 area and to <strong><em>create</em></strong>, <strong><em>read</em></strong> and <strong><em>update</em></strong> the records you desire in the MarketPlace Provider Sandbox. </p>
+<p>The exposed APIs and the BrowserWeb should help you to fulfil most end-user demo requirements.  </p>
+<div class="WARNING"><h5>Warning</h5><p>The MarketPlace Provider Sandbox is a shared resource, so we are unable to guarantee that your data will be retained in the state you left it in. We also recommend avoiding the use of confidential or personal data when Creating/Updating records. </p>
+</div>
+<div class="NOTE"><h5>Note</h5><p>Please find below a list of actions that are possible to be done into the T24 BrowserWeb interface:</p>
+<ul>
+<li><p><a href="login-t24.html"><ins>Login to BrowserWeb</ins></a></p>
+</li>
+<li><p><a href="customer.html"><ins>Create Customer</ins></a></p>
+</li>
+<li><p><a href="accounts.html"><ins>Create Accounts</ins></a></p>
+</li>
+<li><p><a href="teller.html"><ins>Cash Deposits</ins></a></p>
+</li>
+<li><p><a href="external-user.html"><ins>Create external user</ins></a> that will allow you to connect to the Internet Banking application.</p>
+</li>
+<li><p><a href="login-retail.html"><ins>Login to Internet Banking application</ins></a></p>
+</li>
+</ul>
+</div>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

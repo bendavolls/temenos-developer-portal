@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Start with Prospect Iris </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Start with Prospect Iris ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Start with Prospect Iris ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="start-with-prospect-iris">Start with Prospect Iris</h1>
+
+<h2 id="introduction">Introduction</h2>
+<p>Prospect-IRIS is sample project for develop banking APIs. This project using IRIS and works with Temenos T24.</p>
+<h2 id="prerequisite">Prerequisite</h2>
+<ul>
+<li>Github Account – visit <a href="https://github.com/">http://www.github.com</a> to create an account</li>
+<li>Temenos MarketPlace products<ul>
+<li>Member SDKs and Design Tools</li>
+</ul>
+</li>
+<li>Knowledge of Web Technology</li>
+<li>Git SCM Tools – Download from <a href="https://git-scm.com/download/">https://git-scm.com/download/</a></li>
+</ul>
+<h2 id="github-repository">Github repository</h2>
+<p>In order to get the Prospect-iris into your development environment please follow steps mentioned <a href="http://developer.temenos.com/interaction/30-minutes.html">here</a>.</p>
+<h2 id="create-flow-and-events-in-t24">Create Flow and Events in T24</h2>
+<p>In order To create a Flow in T24 please follow this 30 Minutes guide available <a href="http://developer.temenos.com/integration/30-minutes.html">here</a>.</p>
+<h2 id="get-published-flow">GET Published Flow</h2>
+<p>Temenos Sandbox contains necessary API to get the published flow in POSTMAN. API /enqIntegrationFlowCatalogs() will fetch all the available flow in T24 but we want to GET the published flow according to FlowName.</p>
+<p>Example: Below GET request will fetch the published Flow where FlowName=MarketPlaceDemo-FTMarketPlaceDemo</p>
+<pre><code>*http://127.0.0.1:8080/MarketPlaceDemo-iris/MarketPlaceDemo.svc/GB0010001/enqIntegrationFlowCatalogs()?$filter=FlowName eq ‘MarketPlaceDemo-FTMarketPlaceDemo’*
+</code></pre><p>This will also give you the name of the fields on which events will generate</p>
+<p>e.g.</p>
+<pre><code>&lt;d:enqIntegrationFlowCatalog_FieldDefnMvGroup m:type=”Bag(MarketPlaceDemo-modelsModel.enqIntegrationFlowCatalog_FieldDefnMvGroup)”&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;AMOUNT.CREDITED&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;AMOUNT.DEBITED&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;BASE.CURRENCY&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;BC.BANK.SORT.CODE&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;BEN.ACCT.NO&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;BEN.ACCT.NAME&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;BEN.BANK&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;CREDIT.ACCT.NO&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;CREDIT.AMOUNT&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;CREDIT.CURRENCY&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;DEBIT.ACCT.NO&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;DEBIT.AMOUNT&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;FT1&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;REF.NO&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;d:element&gt;
+&lt;d:FieldDefn&gt;TREASURY.RATE&lt;/d:FieldDefn&gt;
+&lt;/d:element&gt;
+&lt;/d:enqIntegrationFlowCatalog_FieldDefnMvGroup&gt;
+</code></pre><h2 id="generate-the-event">Generate the Event</h2>
+<p>To generate the event you have to do some transaction in T24, use the same T24 Version or T24 Application you have created in above steps.</p>
+<p>Follow <a href="http://developer.temenos.com/banking/create-a-funds-transfer.html">this guide</a> to Initiate a transaction.</p>
+<h2 id="get-generated-event">GET Generated Event</h2>
+<p>API /enqIntegrationEventss() will return you all the processed and unprocessed events from events queue.</p>
+<p>Example: Below URI will return all available events data where EventType=MarketPlaceDemo-FTMarketPlaceDemo</p>
+<pre><code>http://127.0.0.1:8080/MarketPlaceDemo-iris/MarketPlaceDemo.svc/GB0010001/enqIntegrationEventss()?$filter=EventType eq ‘MarketPlaceDemo-FTMarketPlaceDemo’
+</code></pre><h2 id="get-generated-events-in-java-program">Get Generated Events in Java Program</h2>
+<p>Here we are using Prospect-IRIS project, all source and example available in the project, for this example we are using <a href="http://unirest.io/java.html">unirest client library</a> feel free change something you prefer.</p>
+<p>maven dependency for this class</p>
+<pre><code>&lt;dependency&gt;
+&lt;groupId&gt;com.mashape.unirest&lt;/groupId&gt;
+&lt;artifactId&gt;unirest-java&lt;/artifactId&gt;
+&lt;version&gt;1.3.0&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><p>Configuration class</p>
+<pre><code>public class Configuration {
+public static String DATA_SERVICE_URL = “http://127.0.0.1:8080/MarketPlaceDemo-iris/MarketPlaceDemo.svc/GB0010001/”;
+
+public static String INPUTTER_USER_NAME = “USER001”;
+public static String INPUTTER_PASSWORD = “123456”;
+
+public static String AUTHORISER_USER_NAME = “USER002”;
+public static String AUTHORISER_PASSWORD = “123456”;
+}
+</code></pre><p>Print Integration event on the console</p>
+<pre><code>public void printIntegrationEvent() throws UnirestException, IOException {
+String url = Configuration.DATA_SERVICE_URL + “enqIntegrationEventss()?$filter=substringof(‘MarketPlace’, EventType)”;
+Unirest.setDefaultHeader(“Accept”, “application/atom+xml”);
+HttpResponse&lt;InputStream&gt; response = Unirest.get(url).basicAuth(Configuration.INPUTTER_USER_NAME,
+Configuration.INPUTTER_PASSWORD).asBinary();
+System.out.println(IOUtils.toString(response.getBody()));
+}
+</code></pre><p>Note: You need to add import from respective classes, this sample is available as a Integration Test in GitHub project.</p>
+<h2 id="get-generated-events-since-">GET Generated events since …</h2>
+<p>You can specify the filter to fetch the events</p>
+<pre><code>// set the date you want to fetch the events since
+Date sd = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss.SSS”).parse(“2016-03-23 20:38:32.522”);
+long time = sd.getTime();
+// format the time stamp so T24 understand
+String t24Date = String.valueOf(time).substring(0, 10) + “.” + String.valueOf(time).substring(10);
+
+String filter = “?$filter=substringof(‘MarketPlace’, EventType)&amp;$filter=CreationTime gt ‘” + t24Date + “‘”;
+String url = Configuration.DATA_SERVICE_URL + resourceName + filter;
+Unirest.setDefaultHeader(“Accept”, “application/atom+xml”);
+HttpResponse&lt;InputStream&gt; response = Unirest.get(url)
+.basicAuth(Configuration.INPUTTER_USER_NAME, Configuration.INPUTTER_PASSWORD).asBinary();
+System.out.println(IOUtils.toString(response.getBody()));
+</code></pre><p>In this example you’ll get all the events after <strong>23-March-2016 20:30:32</strong></p>
+<h2 id="get-generated-events-for-one-hour-time-interval">GET generated events for one hour Time interval</h2>
+<p>You can specify the time range to fetch the events</p>
+<pre><code>// set the date you want to fetch the events since – keep one hour gap
+Date sd1 = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss.SSS”).parse(“2016-03-23 19:38:32.522”);
+Date sd2 = new SimpleDateFormat(“yyyy-MM-dd HH:mm:ss.SSS”).parse(“2016-03-23 20:38:32.522”);
+long time1 = sd1.getTime();
+long time2 = sd2.getTime();
+
+// format the time stamp so T24 understand
+String t24Date1 = String.valueOf(time1).substring(0, 10) + “.” + String.valueOf(time1).substring(10);
+String t24Date2 = String.valueOf(time2).substring(0, 10) + “.” + String.valueOf(time2).substring(10);
+
+//create filter string
+String filter = “?$filter=substringof(‘MarketPlace’, EventType)&amp;$filter=CreationTime gt ‘” + t24Date1
++ “‘ and CreationTime lt ‘” + t24Date2 + “‘”;
+
+String url = Configuration.DATA_SERVICE_URL + resourceName + filter;
+Unirest.setDefaultHeader(“Accept”, “application/atom+xml”);
+HttpResponse&lt;InputStream&gt; response = Unirest.get(url)
+.basicAuth(Configuration.INPUTTER_USER_NAME, Configuration.INPUTTER_PASSWORD).asBinary();
+System.out.println(IOUtils.toString(response.getBody()));
+</code></pre><p>You get all the events in between the <strong>2016-03-23 19:38:32.522</strong> and <strong>2016-03-23 20:38:32.522</strong></p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

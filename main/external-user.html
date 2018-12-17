@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User Retail Banking </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User Retail Banking ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="User Retail Banking ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="external-user">External User</h1>
+
+<div class="NOTE"><h5>Note</h5><p> Each External User is related to:</p>
+<ul>
+<li>a <strong>customer</strong> (i.e., the person who enters the system through an External User)</li>
+<li>an <strong>internet service arrangement</strong></li>
+</ul>
+</div>
+<p>The external user creation process involves the following steps: </p>
+<ul>
+<li>Create a Customer in T24</li>
+<li>Create accounts for this new Customer</li>
+<li>Create and authorise an Internet Service Arrangement</li>
+<li>Create and authorise the External User</li>
+<li>Activate External User</li>
+</ul>
+<h2 id="create-a-customer-in-t24">Create a Customer in T24</h2>
+<p>Please follow <a href="customer.html"><ins><strong>this user guide</strong></ins></a> to know how to create one.</p>
+<h2 id="create-accounts">Create Accounts</h2>
+<p>Please follow <a href="accounts.html"><ins><strong>this user guide</strong></ins></a> to know how to create one.</p>
+<h2 id="create-and-authorise-an-internet-service-arrangement">Create and authorise an Internet Service Arrangement</h2>
+<p>An Internet Service Arrangement is an instance of a certain product that is linked to a specific customer. 
+This arrangement is a personalized instance of a Internet Banking product that defines what the user gets to view when they access the system. When creating the arrangement, some default settings are included.</p>
+<p>To <strong>create</strong> the Internet Service Arrangement:</p>
+<ul>
+<li>Go to <strong>User Menu</strong> &gt; <strong>Product Catalog</strong></li>
+<li>From Category list (under Product Groups) select &gt; <strong>Online Services</strong> &gt; <strong>Retail Online Services</strong> &gt; <strong>Retail Internet Banking</strong>, which will create a new arrangement:</li>
+</ul>
+<p><img src="images/external-user-create-arrangement.png" alt=""></p>
+<p><br></p>
+<ul>
+<li>A new window is displayed &gt; Insert the** Customer Id** (for the client you want to provide Internet access) and click <strong>Validate</strong> button &gt; An internet service arrangement is created with default settings<ul>
+<li><strong>Note down the arrangement Id</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="images/external-user-arrangement-details.png" alt=""></p>
+<p>To <strong>authorise</strong> the Internet Service Arrangement (you must authorise the record before it can be live into the database):</p>
+<ul>
+<li>Log out and log in again with a different user (the second user id you have received in your <em>Welcome</em> email)</li>
+<li>In the command line type <em>AA.ARRANGEMENT.ACTIVITY A</em> <em>AAACT1810700G80F78</em> <strong>(AA.ARRANGEMENT.ACTIVITY A</strong> <em>+ the arrangement id</em><strong>)</strong></li>
+<li>Press <strong>enter</strong> and then <strong>authorize</strong> the transaction (double tick button) </li>
+<li>Transaction is complete.</li>
+</ul>
+<h2 id="create-the-external-user">Create the External User</h2>
+<ul>
+<li>Under <strong>Admin Menu</strong> &gt; click <strong>External User Administration</strong> &gt; <strong>Create/ Manage Online Banking Access</strong> &gt; <strong>Create External User</strong><ul>
+<li>In the new screen displayed, type the following:</li>
+<li>External User Creation (<em>RETAIL5</em>): <em>type a name that the customer will use to login</em></li>
+<li>Channel is defaulted with specific value (<em>INTERNET</em> - to be used for access to Internet banking; <em>TCMOBILE</em> to be used for access to Mobile banking)</li>
+<li>Arrangement (<em>AA181078RQL3</em>): <em>the generated value while creating an Internet Service Arrangement</em></li>
+<li>Start Date (<em>29 MAY 2018</em>): <em>use calendar and choose today&#39;s date</em></li>
+<li>End Date (<em>31 DEC 2018</em>): <em>use calendar and choose user&#39;s availability date</em></li>
+<li>Authentication Type (<em>External</em>): <em>make sure &#39;External&#39; is checked</em></li>
+</ul>
+</li>
+</ul>
+<p><img src="images/external-user-create.png" alt=""></p>
+<ul>
+<li>To <strong>authorise</strong> the created external user record (you must authorise the record before it can be live into the database):<ul>
+<li>Logout and login with a different user</li>
+<li>Go to <strong>Admin Menu</strong> &gt; <strong>External User Administration</strong> &gt; <strong>Authorise Online Banking Access</strong> &gt; <strong>Authorise Channel User</strong> and click on the authorise button</li>
+<li>At this moment Record status appears as &#39;INAU&#39; = unauthorised &gt; Commit the record.</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/external-user-authorise.png" alt=""></p>
+<h2 id="activate-external-user">Activate External User</h2>
+<ul>
+<li>You can log back with previous user</li>
+<li>Go to <strong>Admin Menu</strong> &gt; <strong>External User Administration</strong> &gt; <strong>Create/Manage Online Banking Access</strong> &gt; <strong>Manage External Users</strong>        </li>
+<li>a search screen is displayed &gt; enter <strong><em>Customer Id</em></strong> or <strong><em>ExternalUser Id</em></strong> and click <strong>Find</strong> button</li>
+<li>from scroll button on the right, select <strong>Modify Channel User</strong> &gt; press <strong>Enter</strong> button</li>
+<li>change <strong>status</strong> from &#39;<em>Initiated</em>&#39; into &#39;<em>Active</em>&#39;</li>
+<li><strong>Commit</strong> the deal</li>
+<li><strong>Authorize</strong> the External User as mentioned above </li>
+<li>External user is activated</li>
+<li>You can now insert User ID and password <em>123456</em> to <a href="login-retail.html"><ins>login to Retail application</ins></a>.</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

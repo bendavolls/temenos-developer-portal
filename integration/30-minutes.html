@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Temenos Integration Framework - 30 Minutes </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Temenos Integration Framework - 30 Minutes ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Temenos Integration Framework - 30 Minutes ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="integration-events">Integration Events</h1>
+
+<p>Integration Framework Service is used by to perform event delivery to a middleware and to perform transformations.</p>
+<p>Integration Framework Service handles the following the high-level operations:</p>
+<ul>
+<li>Transformations</li>
+<li>Event Delivery through middleware</li>
+</ul>
+<h1 id="introduction">Introduction</h1>
+<p>This guide will help you to deep down into T24 Integration Events. In <a href="3-minutes.html">3 Minutes Guide</a> we accessed events in POSTMAN using Data Service and in this guide we’ll:</p>
+<ul>
+<li>Create T24 Integration Project<ul>
+<li>Create Events</li>
+<li>Create Flow</li>
+<li>Create Events &amp; Flow Design Studio Package</li>
+</ul>
+</li>
+<li>Install the events</li>
+<li>View event flow in T24</li>
+<li>Generate the events</li>
+<li>Event data in REST Client</li>
+</ul>
+<h1 id="prerequisites">Prerequisites</h1>
+<p>To complete this guide you need:</p>
+<ul>
+<li><p>Temenos Sandbox</p>
+</li>
+<li><p>Temenos Design Studio</p>
+</li>
+<li><p>Google Chrome browser – Download from here: <a href="https://www.google.co.uk/chrome/browser/desktop/" title="Chrome">Chrome</a></p>
+</li>
+<li><p>POSTMAN chrome extension</p>
+<ul>
+<li>Either look for POSTMAN ReST client on any search engine OR</li>
+<li>Click this <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en" title="Postman">link</a> </li>
+</ul>
+</li>
+<li><p>Completed following guides:</p>
+<ul>
+<li><a href="../marketplace/sandbox.html">What is Temenos Sandbox</a></li>
+<li><a href="../interaction/3-minutes.html">Data Service 3 Minutes Guide</a></li>
+<li><a href="3-minutes.html">Integration Events 3 Minutes Guide</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="create-t24-integration-project">Create T24 Integration Project</h1>
+<ul>
+<li>Launch Design Studio </li>
+<li>Make sure to select Integration Studio perspective:<ul>
+<li>On top menu bar, go to Window &gt; Perspective &gt; Open Perspective &gt; Other</li>
+<li>From the list, click on Integration Studio &gt; OK</li>
+</ul>
+</li>
+<li>In order to create a new T24 Integration Project go to File &gt; New &gt; T24 Integration Project:<ul>
+<li>Choose a name for your project</li>
+<li>Check &#39;Enable project specific settings&#39;</li>
+<li>Choose Connection Method as Web Service</li>
+<li>Insert IF Service URL:  http://<em>localhost:9089</em>/axis2/   (replace &#39;localhost:9089&#39; with your sandbox address or use your localhost, then &#39;/axis2/&#39;)</li>
+<li>Insert your T24 User Name and Password</li>
+</ul>
+</li>
+</ul>
+<p>After finishing above steps, you’ll get an empty project in your workspace:</p>
+<p><img src="images/empty-project.png" alt="new empty project"></p>
+<h1 id="create-events">Create Events</h1>
+<ul>
+<li><p>In created project, go to Events folder &gt; click right &gt; New &gt; T24 Event Wizard</p>
+</li>
+<li><p>Enter the Event name (File name) e.g. FT.event</p>
+</li>
+<li>Click on Finish button. </li>
+</ul>
+<h2 id="exit-point">Exit Point</h2>
+<ul>
+<li>Select the Exit Point Type and T24 Version details. In this example we have selected <strong>comma</strong> version of FUNDS.TRANSFER application and exit point INPUT.ROUTINE because we want the event data when user inputs something.</li>
+</ul>
+<p><img src="images/if-exit-points1.png" alt="ft event"></p>
+<h1 id="create-flow">Create Flow</h1>
+<p>Now create the Flow for this Event. </p>
+<ul>
+<li>Click on the Flow tab and enter the Flow name </li>
+</ul>
+<p><img src="images/ft-flow.png" alt="ft flow"></p>
+<ul>
+<li>There are two options:<ul>
+<li>If you want to use any existing Flow, then click on <strong>Browse</strong> button and <strong>Select</strong> from existing ones:</li>
+<li>otherwise click on Edit:</li>
+</ul>
+</li>
+<li>Select fields of interest:</li>
+</ul>
+<p><img src="images/integration-flow-design.png" alt="integration flow design"></p>
+<ul>
+<li>Save the changes: CTRL + S</li>
+</ul>
+<h1 id="publish-event-flow-in-t24">Publish Event Flow in T24</h1>
+<ul>
+<li>Right click on the project name, go to Integration Studio and click on Publish</li>
+<li>You should get a success message if no problem occurs during publishing the events.</li>
+</ul>
+<p><img src="images/integration-log-message.png" alt="integration log message"></p>
+<h1 id="check-availability-of-the-flow-in-t24">Check availability of the Flow in T24</h1>
+<ul>
+<li>Login to T24. </li>
+<li>Once you login, type IF.INTEGRATION.FLOW.CATALOG L L in command windows and press enter key. </li>
+<li>A new window will popup &gt; select List Live File and there &gt; search your Flow as per below example:</li>
+</ul>
+<p><img src="images/search-flow.png" alt="search flow"></p>
+<ul>
+<li>You can see that the flow created in above steps is available in T24:</li>
+</ul>
+<p><img src="images/flow-available-t24.png" alt="flow available in t24"></p>
+<ul>
+<li>When clicking on it, it will bring up the details of the Flow designed before:</li>
+</ul>
+<p><img src="images/flow-details.png" alt="flow details in t24"></p>
+<ul>
+<li>Alternatively you can directly type the name of the flow get it directly from T24 command windows:</li>
+</ul>
+<p>e.g.
+IF.INTEGRATION.FLOW.CATALOG S IntegrationDemo-FTFlow</p>
+<h1 id="initiate-transaction-and-see-the-event-data-in-postman">Initiate Transaction and See the Event Data in POSTMAN</h1>
+<p>Follow <a href="3-minutes.html">this</a>  3 Minutes guide to see events data in POSTMAN</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

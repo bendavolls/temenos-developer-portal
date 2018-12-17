@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Events &amp; Flow Designer </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Events &amp; Flow Designer ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Events &amp; Flow Designer ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="events--flow-designer">Events &amp; Flow Designer</h1>
+
+<div class="NOTE"><h5>Note</h5><p><em>Integration Framework Service handles the following the high-level operations:</em>  </p>
+<ul>
+<li><p>Transformations </p>
+</li>
+<li><p>Event Delivery through middleware </p>
+</li>
+</ul>
+</div>
+<h2 id="highlights">Highlights:</h2>
+<hr>
+<p><strong>Integration Event per Company</strong></p>
+<p>Allows the events specific to a company to be stored in a specific file of IF.EVENTS.INTERFACE.TABLE. </p>
+<p><strong>Benefits:</strong></p>
+<p>•   Provide confidentiality to the company specific data</p>
+<p>•   Have reduced number of records per table</p>
+<p>•   Improve the performance</p>
+<p>T24 IIB (IBM Integration Bus) Custom Adapter allows the user to select the list of lead companies from which the event need to be polled. If no company is selected, by default the polling will happen for all companies.</p>
+<p><strong>Integration service optional transformation XSLT prior to message delivery</strong></p>
+<p align="justify">If the integration framework is not used with an ESB, an additional step may be performed prior to events being written to the output queue: transformation of outgoing Integration Framework messages to a user-defined format through the use of locally defined XSLT.</p>
+
+
+<p><strong>Conditional event generation</strong></p>
+<p align="justify">The event/data flow allows to specify at design time, which criteria need to be met in order to have the integration event saved. The criteria can only be based on fields already present in the data flow. 
+There are no rules checked concerning the complexity of the filters implemented, however it is advisable to design the filter so that the majority of the superfluous events are not generated and perform a second step fine-tuning in the ESB. A good rule may be to use 80% - 20% (80% needless events are eliminated in the first pass and 20% are left and may be filtered out using ESB specific processing).</p>
+
+
+<p><strong>Selective event retrieval and delivery for multiple destinations (queues)</strong></p>
+<p align="justify">The integration service allows additional parameters to be set to manage the selection of events according to event types and (optional) delivery to a specific queue.</p>
+
+<p><strong>Integration Adapters – batching of events and multiple event types retrieval by one adapter (IIB)</strong></p>
+<p align="justify">The IBM Integration Bus (IIB) custom adapters for T24 gives the possibility to reduce the number of inbound adapters running in parallel in large scale diversified implementations.
+In the case of the selection of lists of integration event types with a batching attribute and size set, the delivery will be performed in messages containing homogeneous event sets with a maximum number of events pointed by the maximum batch size.</p>
+
+<p><strong>Integration publisher - publication per exit point</strong></p>
+<p align="justify">The integration publisher will allow a fine grained publication of the exit points and related data flows. Previously the publication of the entire project was the only possibility. It is now possible to proceed to a fine-grained publication from the integration exit point definition. Only the data flows defined for the exit point or exit points selected will be published.</p>
+
+<p><strong>Integration publisher – event packager and command line deployment</strong></p>
+<p align="justify">Packages can be built in the T24 Integration Project using <strong>Design Studio</strong> for a set of selected exit points and data flows. From the integration project, using “Run configurations” you can now select the maven build configuration for the project and create the artefacts (.jar for TAFJ). These artefacts will be deployed e.g. on another running T24 compatible instance using the T24 package installer and packageDataInstaller.</p>
+
+<p>PackageDataInstaller allows to either install event definitions or update existing ones:</p>
+<p>•   Install checks whether the exit point and flow in the package already exists in T24. If exists then the Install option deletes the exit point and flow if exists and creates new exit points and flows. If not then the new exit point and flow gets created.</p>
+<p>•   Update checks whether the exit point and flow in the package already exists in T24. If exists, instead of deleting the existing exit point and flow record, it modifies the existing records. If not then the new exit point and flow gets created.
+The packageDataInstaller also allows us to install only a subset of integration event definitions.</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

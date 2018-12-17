@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User Retail Banking </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User Retail Banking ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="User Retail Banking ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="users">Users</h1>
+
+<p>There are two types of users in T24: </p>
+<ul>
+<li>Internal user = Bank stuff</li>
+<li>External user = Bank customer </li>
+</ul>
+<p>Please see below more details about internal user and what is the process of creation of an external user.</p>
+<h2 id="internal-users">Internal Users</h2>
+<p>There are different types of internal users with different capabilities and admin rights based on their roles such as: Customer Service Agent, Account Office, Customer Relation Manager, Supervisor etc.</p>
+<p>Usually, for testing and demo purposes, you will need two simple users. You can have one user to create, modify records, effect transactions, inquire the database and other operations and a second user to authorize any changes that you do.</p>
+<div class="NOTE"><h5>Note</h5><ul>
+<li>Once you have been provided access to Temenos Sandbox, you will automatically receive two specific users along with a standard password, which you can change first time when you login.</li>
+</ul>
+</div>
+<h2 id="external-users">External Users</h2>
+<div class="NOTE"><h5>Note</h5><p> Each External User is related to:</p>
+<ul>
+<li>a <strong>customer</strong> (i.e., the person who enters the system through an External User)</li>
+<li>an <strong>internet service arrangement</strong></li>
+<li><strong>channel permissions</strong></li>
+</ul>
+</div>
+<p>The external user creation process involves the following steps: </p>
+<ul>
+<li>Create a Customer in T24</li>
+<li>Create an Internet Service Arrangement</li>
+<li>Authorise the Internet Service Arrangement</li>
+<li>Create a Channel Permission</li>
+<li>Create the External User</li>
+<li>Authorise the Channel User </li>
+<li>Activate External User </li>
+</ul>
+<h3 id="create-a-customer-in-t24">Create a Customer in T24</h3>
+<p>Please follow <a href="customer.html"><ins><strong>this user guide</strong></ins></a> to see more details about a T24 customer and how to create one.</p>
+<h3 id="create-an-internet-service-arrangement">Create an Internet Service Arrangement</h3>
+<p>An Internet Service Arrangement is an instance of a certain product that is linked to a specific customer. </p>
+<p>This arrangement is a personalized instance of a Internet Banking product that defines what the user gets to view when they access the system. When creating the arrangement, some default settings are included.</p>
+<ul>
+<li>Go to User Menu &gt; Product Catalog &gt; Create Online Banking Arrangement</li>
+<li>From Category list (under Product Groups) select &gt; Internet Services &gt; Temenos Connect Retail &gt; TCIB Personal Internet Banking, which will create a new arrangement:</li>
+</ul>
+<p><img src="../images/external-user-create-arrangement.png" alt=""></p>
+<p><br></p>
+<ul>
+<li>A new window is displayed &gt; Insert the Customer ID (for the client you want to provide Internet access) and click validate button &gt; An internet service arrangement is created with default settings<ul>
+<li><strong>Note down the arrangement Id</strong></li>
+</ul>
+</li>
+</ul>
+<p><img src="../images/external-user-arrangement-details.png" alt=""></p>
+<h3 id="authorise-the-internet-service-arrangement">Authorise the Internet Service Arrangement</h3>
+<ul>
+<li>Log out and login again with a different user in order to authorise the arrangement</li>
+<li>In the command line type AA.ARRANGEMENT.ACTIVITY A <em>AAACT171073FPYW1YK</em> <strong>(AA.ARRANGEMENT.ACTIVITY A</strong> <em>+ the arrangement id</em><strong>)</strong></li>
+<li>Press enter and then authorize the transaction (double tick button) </li>
+<li>Transaction is complete</li>
+</ul>
+<h3 id="create-a-channel-permission">Create a Channel Permission</h3>
+<ul>
+<li>Under Admin Menu &gt; click External User Administration &gt; Create/Manage Online Banking Access &gt; Manage Permissions </li>
+</ul>
+<ol>
+<li>Click Create New Permission &gt; Insert your customer Id &gt; Give a Group Name (at your choice), for example IB (Internet Banking) &gt; Click Find</li>
+<li>Window expands &gt; Click Create Group Permission </li>
+<li>Window expands with Channel Permission:<ul>
+<li>insert Description (at your choice)</li>
+<li>select Type (click on the field, if you want to see its definition and rules)</li>
+<li>from Dropdown List, select the types of Products you want to give permission for</li>
+<li>select the Permission type (for example, if you want to allow the external user to do transactions, choose &#39;Transact&#39;, if you want to give him only view rights, select &#39;See&#39; etc)</li>
+<li>click Commit button</li>
+<li>transaction is complete &gt; there is no need to authorise this phase</li>
+</ul>
+</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p><strong>Important!</strong> </p>
+<p>When creating the Group Permission, the products created previously (for example current accounts) will not show up in this menu and will NOT be available in the Internet Banking application.</p>
+<p> In order to create an account for which you want to give Internet access to the customer, please follow <a href="accounts.html#create-online-banking-arrangement-for-an-account"><ins><strong>this section</strong></ins></a> of Accounts user guide.</p>
+<p> After creating the account arrangement, the new account will be automatically available into Products list from Group Permission (see below example, image 3) and also into the Internet Banking application.</p>
+</div>
+<p><img src="../images/external-user-create-permission.png" alt=""></p>
+<h3 id="create-the-external-user">Create the External User</h3>
+<ul>
+<li>Under Admin Menu &gt; click External User Administration &gt; Create/ Manage Online Banking Access &gt; Create External User<ul>
+<li>In the new screen displayed, type the following:</li>
+<li>External User Creation (<em>RETAIL</em>): <em>type a name that the customer will use to login</em></li>
+<li>Name (<em>Cersei Baratheon</em>): <em>customer&#39;s system name</em></li>
+<li>Channel (<em>INTERNET</em>): <em>click scroll down button</em></li>
+<li>Arrangement (<em>AA171077M827</em>): <em>click scroll down button</em></li>
+<li>Allowed Customer (<em>190207</em>): <em>click scroll down button</em></li>
+<li>Channel Permission (<em>190207-TC</em>): <em>click scroll down button</em></li>
+<li>Start Date (<em>26 JAN 2018</em>): <em>use calendar and choose today&#39;s date</em></li>
+<li>End Date (<em>26 JUN 2018</em>): <em>use calendar and choose user&#39;s availability date</em></li>
+<li>Authentication Type (<em>External</em>): <em>make sure &#39;External&#39; is checked</em></li>
+</ul>
+</li>
+</ul>
+<p><img src="../images/external-user-create.png" alt=""></p>
+<h3 id="authorise-the-channel-user">Authorise the Channel User</h3>
+<ul>
+<li>Logout and login with a different user</li>
+<li>Go to Admin Menu &gt; External User Administration &gt; Authorise Online Banking Access &gt; Authorise Channel User </li>
+<li>At this moment Record status appears as &#39;INAU&#39; = unauthorised &gt; Commit the record</li>
+</ul>
+<p><img src="../images/external-user-authorise.png" alt=""></p>
+<h3 id="activate-external-user">Activate External User</h3>
+<ul>
+<li>You can log back with previous user</li>
+<li>Go to Admin Menu &gt; External User Administration &gt; Create/Manage Online Banking Access &gt; Manage External Users        - a search screen is displayed &gt; enter customer id and click find<ul>
+<li>from scroll button on the right, select Modify Channel User &gt; press enter</li>
+<li>change <strong>status</strong> from &#39;Initiated&#39; into &#39;Active&#39;</li>
+</ul>
+</li>
+<li>Commit the deal (no need for authorization at this step)</li>
+<li>External user is created</li>
+<li>You can now insert User ID and password 123456 to login to TCIB application</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

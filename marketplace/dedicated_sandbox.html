@@ -1,0 +1,247 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dedicated Sandbox </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Dedicated Sandbox ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Dedicated Sandbox ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="dedicated-sandbox">Dedicated Sandbox</h1>
+
+<p>A dedicated Sandbox is a Temenos Sandbox that will be available only for a single provider and where the provider can do following operations:</p>
+<ul>
+<li>Create design studio package and upload to T24 using GitLab</li>
+<li>Create new API package and upload to T24 using GitLab</li>
+<li>Deploying other localjars using Gitlab</li>
+</ul>
+<p>Each provider will be able to access his dedicated sandbox by going to his MyApps page in MarketPlace. When he will click on the sandbox product in MarketPlace he will be redirected to his organization link address. The provider will receive an email with the user and password required to connect to this organization link.
+Here the provider will have access to one T24 dedicated sandbox.</p>
+<p>The Environment page contains 3 important sections:</p>
+<ul>
+<li><strong><em>T24 Release</em></strong> section that gives access to the T24 area through browser.</li>
+<li><strong><em>Database</em></strong> section that indicates the status of the database and gives access to a copy of the database of the T24 area.</li>
+<li><strong><em>Repository</em></strong> section that gives access to the gitlab repository that allows providers to deploy their packages, plugins, localjar files, etc.</li>
+</ul>
+<h2 id="t24-release-section---available-actions">T24 Release section - available actions</h2>
+<ul>
+<li>By clicking on “<strong>GO TO APPLICATION</strong>”, a new tab containing the <strong><em>T24 BrowserWeb</em></strong> URL is opened in browser. Users and passwords to be used here will be received on email.</li>
+<li>By clicking on “<strong>MONITOR APPLICATION</strong>” the <strong><em>TAFJEE</em></strong> Servlets page will be opened in a new browser tab and from here:<ul>
+<li><em>Diagnostic</em> section: get details about your TAFJ environment, get routine compilation details, etc.</li>
+<li><em>Execution</em> section: run services, etc.</li>
+<li><em>Troubleshooting</em> section: access log files, commo files, etc.</li>
+</ul>
+</li>
+<li>By clicking on &quot;<strong><em>Export Environment</em></strong>&quot; button a zip file will be generated on the <em>sftp.temenos.cloud</em> portal and this zip file will contain information about:<ul>
+<li>the content of the default folder of T24;</li>
+<li>what are all jar files deployed in T24 sandbox and the correspondent module.xml file;</li>
+<li>what are the war file deployed in T24 sandbox and the jboss server log.</li>
+</ul>
+</li>
+<li><strong><em>Increase instances</em></strong> button allows provider to increase the number of T24 VMs in cloud in order to improve performance.</li>
+<li><strong><em>Decrease instances</em></strong> button allows provider to decrease the number of T24 VMs in cloud that were previously increased.</li>
+<li><strong><em>Rebuild application</em></strong> button allows providers to recreate their environment. In case a provider deploys something into the gitlab (a package or a plugin or anything else) and he decides that he wants to undo that particular package it will not be enough just to remove it from gitlab. The package remains installed into the T24 area until a rebuild is done that is actually deleting current environment, creating a new one and installing there whatever is present at that time into the gitlab repository.</li>
+<li><strong><em>Start application</em></strong> button allows provider to start the jboss.</li>
+<li><strong><em>Stop application</em></strong> button allows provider to stop the jboss.</li>
+</ul>
+<h2 id="database-section---available-actions">Database section - available actions</h2>
+<ul>
+<li>By clicking on &quot;<strong><em>Export database</em></strong>&quot; button a zip file will be generated in the <em>sftp.cloud.temenos</em> portal and this zip file will contain the database of the sandbox.
+Note: This database can be used as a backup that can be deployed later on into the sandbox or that can be given to other users to deploy it into their own area and do some testing/development or it can be used to do some changes into it and then to deploy it into the sandbox, etc.</li>
+</ul>
+<h2 id="repository-section">Repository section</h2>
+<p>This section displays the gitlab repository correspondent to your T24 sandbox. In order to be able to deploy changes into the sandbox please:</p>
+<ul>
+<li><a href="http://documentation.temenos.cloud/home/docstore/techguides/user-creation-in-paas.html">Generate</a> a SSH key and save it </li>
+<li><a href="http://documentation.temenos.cloud/home/docstore/techguides/use-gitlab-repository.html">Clone</a> the gitlab repository  </li>
+</ul>
+<h2 id="useful-information">Useful information</h2>
+<ul>
+<li><p><a href="http://developer.temenos.com/interaction/prospect.html">Core Banking available APIs</a> 
+that can be easily accessed by using link address <strong><em>https://[your sandbox address]/Prospect-iris/Prospect.svc/GB0010001/</em></strong> and the users and passwords that where communicated via email for accessing the T24 BrowserWeb.</p>
+</li>
+<li><p><a href="http://developer.temenos.com/interaction/channels.html">Internet &amp; Mobile Banking available APIs</a>
+that can be easily accessed by using link address: <strong><em>https://[your sandbox address]/Channels-iris/Channels.svc/GB0010001/</em></strong> and the users and passwords that where communicated via email for accessing Retail.</p>
+</li>
+<li><p>For guidance in how to investigate if whatever was committed in gitlab was done correctly please check instructions mentioned <a href="http://documentation.temenos.cloud/home/docstore/techguides/troubleshooting.html">here</a>.</p>
+</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

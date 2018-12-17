@@ -1,0 +1,325 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Banking API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Banking API ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Banking API ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="banking-api">Banking API</h1>
+
+<p><em>Temenos provides two types of API products</em></p>
+<ul>
+<li><strong>Core Banking API</strong></li>
+<li><strong>Internet &amp; Mobile Banking API</strong></li>
+</ul>
+<h2 id="core-banking">Core Banking</h2>
+<p>These APIs are for bank employees, where they can:</p>
+<ul>
+<li>View and create <strong>USERS</strong></li>
+<li>View and create <strong>ACCOUNT</strong></li>
+<li>View and create <strong>CUSTOMER</strong></li>
+<li><strong>Funds Transfer</strong></li>
+<li><strong>Cash Deposit</strong> &amp; <strong>Withdrawal</strong></li>
+<li>And many banking day to day activities</li>
+</ul>
+<h2 id="internet--mobile-banking">Internet &amp; Mobile Banking</h2>
+<p>These APIs are for bank customers where they can:</p>
+<ul>
+<li>See their account balance</li>
+<li>Transfer the funds from one account to another account</li>
+<li>Domestic transfer</li>
+<li>International Funds Transfer </li>
+<li>Pay a bill</li>
+<li>Direct debit</li>
+<li>Create a standing order</li>
+</ul>
+<h1 id="api-interface">API Interface</h1>
+<p>The <strong><em>Temenos Sandbox</em></strong> provides a default data service where you can try all of the above operations</p>
+<h2 id="retail-banking">Retail Banking</h2>
+<p>Prospect-iris is the default open source project, that contains most of the basic banking APIs. Customize this project according to your needs or deploy directly to your sandbox to access the APIs</p>
+<p>The default URL of this service is
+&gt;</p>
+<blockquote><p><code>http(s)//127.0.0.1/Prospect-iris/Prospect.svc/GB0010001</code></p>
+</blockquote>
+<p><strong><em>Temenos APIs</em></strong> support BASIC authentication and these details are already available inside your products.</p>
+<h2 id="channels">Channels</h2>
+<p>This product already deployed into your sandbox and you need to follow the getting started guide to work on this</p>
+<p>The default URL of this service is
+&gt;</p>
+<blockquote><p><code>http(s)//127.0.0.1/Channels-iris/Channels.svc/GB0010001</code></p>
+</blockquote>
+<h1 id="api-basics">API Basics</h1>
+<p>Before starting the integration here is some basic information that is required to develop and integrate your solution with <strong><em>Temenos Digital Banking Suites</em></strong></p>
+<h2 id="request-headers">Request Headers</h2>
+<p>These headers are sent by the client in a HTTP protocol transaction. All headers are RFC822 format headers.</p>
+<h3 id="authentication">Authentication</h3>
+<p><strong><em>Temenos API</em></strong> supports BASIC authentication only where you need to provide the Username &amp; Password of the data service.</p>
+<p>e.g. <code>[{&quot;key&quot;:&quot;Authorization&quot;,&quot;value&quot;:&quot;Basic Uk9MRkdFUkxJTkdUQzoxMjM0NTY=&quot;}]</code></p>
+<h3 id="accept">Accept</h3>
+<p>This header is for representation schemes (Content-Type meta information values) which will be accepted in the response to this request. <strong><em>Temenos API</em></strong> supports only following Accept headers</p>
+<ul>
+<li><p>application/atom+xml
+e.g. <code>[{&quot;key&quot;:&quot;Accept&quot;,&quot;value&quot;:&quot;application/atom+xml&quot;}]</code></p>
+</li>
+<li><p>application/hal+json
+e.g. <code>[{&quot;key&quot;:&quot;Accept&quot;,&quot;value&quot;:&quot;application/hal+json&quot;}]</code></p>
+</li>
+</ul>
+<h3 id="if-match">If-Match</h3>
+<p>The If-Match request-header field is used with a method to make it conditional. A client that has one or more entities previously obtained from the resource can verify whether that entity is modified or not. If the entity has been modified, then it&#39;ll return a etag mismatch error. If not, it will return a success message. </p>
+<p>e.g. <code>[{&quot;key&quot;:&quot;If-Match&quot;,&quot;value&quot;:&quot;Uk9MRkdFUkxJTkdUQzoxMjM0NTY&quot;}]</code></p>
+<h2 id="response-headers">Response Headers</h2>
+<p>These headers are sent by the server with additional information in a HTTP protocol transaction. All headers are RFC822 format headers.</p>
+<h3 id="content-type">Content-Type</h3>
+<p>The Content-Type header field indicates the media type of the entity-body sent to the recipient.  <strong><em>Temenos API</em></strong> supports only the following Accept headers</p>
+<ul>
+<li><p>application/atom+xml
+e.g. <code>[{&quot;key&quot;:&quot;Content-Type&quot;,&quot;value&quot;:&quot;application/atom+xml&quot;}]</code></p>
+</li>
+<li><p>application/hal+json
+e.g. <code>[{&quot;key&quot;:&quot;Content-Type&quot;,&quot;value&quot;:&quot;application/hal+json&quot;}]</code></p>
+</li>
+</ul>
+<h3 id="etag">ETag</h3>
+<p>The ETag HTTP response header is an identifier for a specific version of a resource. This header can also be used to check whether a resource has been modified. If a resource has been modified, the etag value will change.</p>
+<p>e.g. <code>[{&quot;key&quot;:&quot;ETag&quot;,&quot;value&quot;:&quot;&lt;&lt;etag value&gt;&gt;&quot;}]</code></p>
+<h2 id="response-body">Response Body</h2>
+<p>This is the response received from the server, which could be in either json or XML format according to the Accept request header. </p>
+<h2 id="request-body">Request Body</h2>
+<p>This is the request body sent by the client or user agent to server over HTTP transaction.</p>
+<h2 id="status-code">Status Code</h2>
+<p>For each HTTP transaction, the server will return a status response of either success or failure. Here are the status codes <strong><em>Temenos APIs</em></strong> can return.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Message</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td><strong>OK</strong></td>
+<td>SUCCESS</td>
+</tr>
+<tr>
+<td>201</td>
+<td><strong>CREATED</strong></td>
+<td>Record created</td>
+</tr>
+<tr>
+<td>400</td>
+<td><strong>Bad Input</strong></td>
+<td>Wrong data or invalid body contents</td>
+</tr>
+<tr>
+<td>401</td>
+<td><strong>Unauthorised</strong></td>
+<td>Unable to authorise user</td>
+</tr>
+<tr>
+<td>404</td>
+<td><strong>Resource Not Found</strong></td>
+<td>Requested resource not available in service</td>
+</tr>
+<tr>
+<td>405</td>
+<td><strong>Method Not Found</strong></td>
+<td>Incorrect HTTP method</td>
+</tr>
+<tr>
+<td>412</td>
+<td><strong>Precondition Failed</strong></td>
+<td>Some of the condition not met the criteria</td>
+</tr>
+<tr>
+<td>415</td>
+<td><strong>Unsupported Media Type</strong></td>
+<td>content-type is wrong or not supported</td>
+</tr>
+</tbody>
+</table>
+<h1 id="next-steps">Next Steps</h1>
+<p>Learn how to access these APIs using any standard POSTMAN ReST client or user agents with our <a href="3-minutes.html">3 minutes guide</a>.</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

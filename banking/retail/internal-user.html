@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>User Retail Banking </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="User Retail Banking ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="User Retail Banking ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="users">Users</h1>
+
+<p>There are two types of users in T24: </p>
+<ul>
+<li>Internal user = Bank stuff</li>
+<li>External user = Bank customer </li>
+</ul>
+<p>Please see below what is the process of User creation for both types.</p>
+<h2 id="internal-users">Internal Users</h2>
+<p>There are different types of internal users with different capabilities and admin rights based on their roles such as: Customer Service Agent, Account Office, Customer Relation Manager, Supervisor etc</p>
+<p>Usually, for testing and demo purposes, you will need two simple users. You can have one user to create, modify records, effect transactions, inquire the database and other operations and a second user to authorize any changes that you do.</p>
+<div class="NOTE"><h5>Note</h5><ul>
+<li><p>Once you have been provided access to Temenos Sandbox, you will automatically receive two specific users along with a standard password, which you can change first time when you login.</p>
+</li>
+<li><p>The necessity to create more users comes in case you might block one user or you need to see different tests done by different users.</p>
+</li>
+</ul>
+</div>
+<p><strong>How to create:</strong></p>
+<ul>
+<li><p>If you are MarketPlace Provider, check your Temenos Sandbox product and get the BrowserWeb url to login in T24.</p>
+<pre><code>  e.g. http://127.0.0.1:8080/BrowserWeb
+</code></pre></li>
+<li>Get the T24 User Name and Password provided by MarketPlace team and click on Sign in.</li>
+<li>Log into the BrowserWeb.</li>
+<li>Once you login, please keep in mind the user that appears on the left corner. See example below: </li>
+<li>In the Menu bar, type “<strong>USER,</strong>” (the <strong>comma</strong> from the end is important in order to skip the authorization step)</li>
+</ul>
+<p><img src="../images/menu-user.png" alt=""></p>
+<p><strong>Copy details of an existing User</strong></p>
+<p>The easiest way to create a new user is to copy the details from an existing one and use them to a new user Id.</p>
+<ul>
+<li>In the new screen, type the user name (ealier identified) as shown below:</li>
+</ul>
+<p><img src="../images/user-name-details.png" alt=""></p>
+<ul>
+<li>Press enter and a new window is open</li>
+<li>Go to “<strong>More Actions…</strong>” and choose from there “<strong>Copy</strong>” as shown below:</li>
+</ul>
+<p><img src="../images/user-more-actions.png" alt=""></p>
+<ul>
+<li><p>Click on validate button (next right to &quot;More Actions&quot;</p>
+</li>
+<li><p>A message is displayed &quot;<em>Deal copied to your T24 clipboard as: application USER Version ,</em>&quot;</p>
+</li>
+</ul>
+<p>You can close this message window and the User Profile window</p>
+<p><strong>Create the new user</strong></p>
+<ul>
+<li>Choose a similar name (for easier use). Here, we will call it SAMPLE22</li>
+<li>In USER, (don&#39;t forget <strong>comma</strong>), type the user ID (<em>SAMPLE22</em>) as shown in the picture below and press enter</li>
+<li>Go to “<strong>More Action…</strong>” and choose from there “<strong>Paste</strong>” and click “<strong>Go</strong>” (or Validate) button</li>
+</ul>
+<p><img src="../images/user-paste.png" alt=""></p>
+<ul>
+<li>The record is automatically populated with the values copied from previous user</li>
+<li>Update the “<strong>User Name</strong>”, the “<strong>Sign On Name</strong>”, the &quot;<strong>Start Date</strong>&quot; (to be TODAY date) and the &quot;<strong>End Date</strong>&quot;. Press commit button</li>
+</ul>
+<div class="WARNING"><h5>Warning</h5><p>User Name must be different than Sign On name. Sign On name is the one you use when you login. For each <strong>Sign On</strong> name there is a related <strong>User Name</strong></p>
+</div>
+<p><img src="../images/user-details-completed.png" alt=""></p>
+<p>Transaction is complete.</p>
+<ul>
+<li>Now sign off and log again into the BrowserWeb with SAMPLE2 user (your newly created user - Sign On Name)</li>
+</ul>
+<p>Just type a random password and then press enter.</p>
+<ul>
+<li>A new screen is displayed asking to set a new password</li>
+<li>After doing this step you will be logged to T24 with your new credentials</li>
+</ul>
+<h2 id="external-users">External Users</h2>
+<p>The user creation process involves the following steps: </p>
+<ul>
+<li>Create Online Banking Arrangement </li>
+<li>Create Group Permission  </li>
+<li>Create External User</li>
+<li>Authorise the Channel User </li>
+<li>Manage External User </li>
+</ul>
+<p>Please check <a href="http://developer.temenos.com/banking/retail/users.html">Users</a> guide to see how to create an external user.</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

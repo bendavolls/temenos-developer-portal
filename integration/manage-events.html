@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Manage Events </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Manage Events ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Manage Events ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="event-delivery-with-jboss">Event Delivery with Jboss</h1>
+
+<p>Integration Service provides the asynchronous <a href="glossary.html#event"><strong>Event</strong></a> delivery functionality through a store and forward interface table and a <a href="glossary.html#tsa"><strong>TSA</strong></a> Service. </p>
+<p>The Events are generated, for example, when a transaction happens for which an  <a href="glossary.html#flow"><strong>Integration Flow</strong></a> is attached. Performing a transaction triggers an event in integration framework and this event will be consumed by <a href="glossary.html#jms"><strong>JMS</strong></a> queue or by a middleware, eventually.</p>
+<p>From the transaction and associated applications, the data enrichments are built as defined in the Flow and an <a href="glossary.html#xml"><strong>XML</strong></a> representation of the Event is generated. This XML would be confirming to the schema representation of the Flow and stored in the IF.EVENTS.INTERFACE.TABLE within T24 into the EVENT.DATA field. The transaction continues and gets completed normally. </p>
+<p>A dedicated TSA Service called INTEGRATION.SERVICE needs to be executed to deliver the events through <a href="glossary.html#calljee"><strong>CALLJEE</strong></a> method. When the event delivery happens this data will be transformed to XML value and delivered to JMS Queue. </p>
+<h1 id="consuming-events">Consuming Events</h1>
+<p>IF Event messages are delivered always in XML format. By running the INTEGRATION.SERVICE, the XML message is delivered to the application server JMS Queue by having the configurations in Parameter record and JMS queue configurations in the application server. Default parameter record containing the queue name is given below.</p>
+<p><img src="images/integration-service-param.png" alt="parameter record"></p>
+<p>And the application server side configurations are already handled for the above default queue.</p>
+<p>With this above configuration XML Message can be delivered to the JMS Queue, later this has to be consumed by a listener program. The custom listener program can be built in Java run in the same application server and then the message has to be translated to understandable format for the outside application that will receive them. Before consuming the event, the listener program should check for the JMS message header in order to identify if that event is indeed supposed to be consumed by it or not. For this to happen it must be set the MSG.PROP.NAME field (for example taskId) into the Parameter record and that field to be also defined into the event as a custom field (taskId equal with a value that will be used by listener to search for it into the JMS header). </p>
+<div class="NOTE"><h5>Note</h5><p>The MSG.PROP.NAME is a multi value field that defines the list of names to be used to create properties to set in the JMS message header. For each value in this field, a property would be added to the JMS message header with the value obtained from an equivalent field in the event record.</p>
+</div>
+<p>We need to consider the following:</p>
+<ol>
+<li>Message data can be retrieved by implementing <em>MessageListener</em> class and through the method onMessage(Message msg);</li>
+<li>Retrieved XML message can be parsed and redirected to the outside application by having supporting jar files like json-simple.jar, jdom.jar, etc.;</li>
+<li>Dependent jars to be mentioned in Maven dependency and Maven build can help us building the classes to a Jar file;</li>
+<li>Jar has to be deployed in the Application Server.</li>
+</ol>
+<div class="NOTE"><h5>Note</h5><p>Please refer to next <a href="https://github.com/temenostech/IntegrationFrameworkEventMDB"><em>IntegrationFrameworkEventMDB</em></a> template project. This is a sample <a href="glossary.html#mdb"><strong>MDB</strong></a> for consuming events from Integration Framework Events Queue. This MDB is configured to consume messages from queue/eventQueue and will echo event XML.</p>
+</div>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.htm
+Sitemap: http://developer.temenos.com/sitemap.xml
+Disallow: /http://developer.temenos.com/banking/retail/reset_user_password.html

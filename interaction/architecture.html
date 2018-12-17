@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>REST </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="REST ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="REST ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>The Interaction Framework is designed to make creating and using web services - the messages that are sent over the Internet to retrieve resources - as easy as possible for developers.</p>
+<p>The framework is built according to <strong>RESTful</strong> constraints, the architectural style of the web, and uses <strong>OData</strong>, the web standard for communication, to make talking to the framework straightforward for user agents.</p>
+<h1 id="rest">REST</h1>
+<p>REpresentational State Transfer (REST) is the architectural style behind how the web works. It consists of a set of architectural constraints applied to a hypermedia system. A hypermedia system provides navigational information to the system&#39;s REST interfaces dynamically by including hypertext links with its responses to messages.</p>
+<div class="NOTE"><h5>Note</h5><p><strong>REST was first defined by Roy Fielding in his 2000 PhD paper. To learn more, see <a href="https://en.wikipedia.org/wiki/Roy_Fielding">https://en.wikipedia.org/wiki/Roy_Fielding</a></strong></p>
+</div>
+<h2 id="restful-constraints">RESTful constraints</h2>
+<p>The Interaction Framework is RESTful because it conforms to the following constraints.</p>
+<h3 id="client-server">Client-Server</h3>
+<p>The Client-Server constraint enforces a distributed architecture, where the roles for each part of the architecture are clear. </p>
+<p>A service - like the Interaction Framework - has to provide one or more capabilities, such as a way to access resources. When a user agent asks the Interaction Framework for a resource the framework either has to carry out or reject the request before sending a response.|</p>
+<h3 id="stateless">Stateless</h3>
+<p>Communication between the user agent and the Interaction Framework has to be stateless.</p>
+<p>The requests sent by the user agent must include everything the Interaction Framework needs to carry out the request. And when the Interaction Framework has dealt with the request, it returns all the session data to the user agent.</p>
+<p>Making the user agent responsible for state data frees up memory in the framework, making it easier to deal with large numbers of concurrent requests.</p>
+<h3 id="cache">Cache</h3>
+<p>The Cache constraint means that responses from the Interaction framework must be labelled as either cacheable or non-cacheable. And requests from user agents go through a cache component, which allows the framework to reuse some previous responses. This leads to a faster, more efficient system.</p>
+<h3 id="interface">Interface</h3>
+<p>The Interface constraint means that the Interaction Framework and the user agents share a single technical interface, to make communication easier. The interface is applied through resource identifiers, and the methods and media types of HTTP.</p>
+<h3 id="layered-system">Layered System</h3>
+<p>The Layered System constraint means that a RESTful service is made up of layers, none of which can &#39;see past&#39; the other. Layers can be swapped in or out without harm to the other layers.</p>
+<p>The Interaction Framework is a layer inserted in a transparent, consistent way between the user agents and the resource providers. And because the framework doesn&#39;t need to know what other services the user agents are using, it reduces the level of dependency - or &#39;tight coupling&#39; - between the user agent and the service.</p>
+<h1 id="hateoas">HATEOAS</h1>
+<p>The Interaction Framework uses a Hypertext As The Engine Of Application State (HATEOAS) based REST architecture. That means that the user agent finds their way through the framework API using hypertext links.</p>
+<h1 id="odata">OData</h1>
+<p>OData is an OASIS open data protocol that allows for the exchange of data between user agents and resource providers. The protocol is HTTP based - so it supports the GET, POST, PUT and DELETE methods described in the REST section - and was designed with REST in mind.</p>
+<p>User agents consume the OData produced by server-side applications, like the Interaction Framework. And server-side applications expose the data to the user agent through web services.</p>
+<h1 id="communicating-with-the-framework">Communicating with the framework</h1>
+<p><img src="images/BasicMultipleInteraction.png" alt="Architecture Diagram"></p>
+<p><strong><em>Key to diagram</em></strong></p>
+<p><strong>A</strong></p>
+<p>The user agents are all REST clients - they are built to consume the OData that the RESTful Interaction Framework produces.Whether the user agent is a web browser, a mobile phone or a specialist interface, they share the same HTTP technical interface and obey REST constraints.</p>
+<p><strong>B</strong></p>
+<p>The user agent sends a request for a resource to the Interaction Framework. The message uses the generic URI syntax and HTTP methods that the framework&#39;s OData layer also uses.</p>
+<p><strong>C</strong></p>
+<p>The Interaction Framework uses the Resource Interaction Model (RIM) language to define what resources are available to the request and help relay commands to the resource provider (or providers).</p>
+<p><strong>D</strong></p>
+<p>The resource providers and third-party services connect to the framework through TCP/IP in a way that best serves the provider - T24 uses its own proprietary T24 connector, but another resource provider could use SOAP or OData.</p>
+<p><strong>E</strong></p>
+<p>The resource providers and third-party services respond to the commands from the Interaction Framework and return the requested resources.</p>
+<p><strong>F</strong></p>
+<p>The framework extends generic OData commands through provider-specific commands, for example T24 commands or Solr commands.</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

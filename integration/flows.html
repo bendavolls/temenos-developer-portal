@@ -1,0 +1,252 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Integration Framework Flows </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Integration Framework Flows ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Integration Framework Flows ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="flows">Flows</h1>
+
+<h2 id="what-is-a-flow">What is a Flow</h2>
+<ul>
+<li>A flow defines the layout of an XML message which will leave T24 when a business <a href="events.html">event</a> occurs. </li>
+</ul>
+<h2 id="what-are-the-benefits-of-flows">What are the Benefits of Flows</h2>
+<ul>
+<li>The flow is referenced at run-time in order for an enriched message to be constructed and dispatched.</li>
+</ul>
+<p><em>(The Run-Time Engine -RTE = system platform, database, and language independent, which provides maximum flexibility with its multi-presentation engine. It supports the development of applications that serve thousands of users simultaneously).</em></p>
+<h2 id="define-or-create-a-flow">Define or Create a Flow</h2>
+<ul>
+<li>Under Customer.event, click Flow tab</li>
+<li>Enter the flow name (Customer)</li>
+<li>Click update the Event fields to be added and select the overrides.</li>
+<li>Click &#39;Edit&#39; button to launch the Flow editor. </li>
+</ul>
+<p><img src="images/edit-flow-customer.png" alt="edit flow customer"></p>
+<ul>
+<li>In the next screen, select from &#39;Field&#39; all the strings required (of interest). </li>
+<li>Double click a selection of fields (top right) to <strong>add</strong> them to the <strong>Flow Enrichments</strong> as in the picture below.</li>
+<li>Application should already be set to <strong>CUSTOMER</strong> (if not, select it now) and the Field control prefilled with all fields available from this application (as available in the connected T24 instance).</li>
+</ul>
+<p>(Include for example some name and address fields)</p>
+<p><img src="images/flow-enrichment-customer.png" alt="flow enrichment customer"></p>
+<p><strong>Additional information:</strong></p>
+<ul>
+<li>Fields selected may be reordered or removed.</li>
+<li>Field control is prefilled with all fields available from this application (as available in the connected T24 instance). </li>
+<li>Attach only valid flows to the integrator. For example, attaching a FundsTransfer flow to a Teller version will result in a publish error, as the fields in FundsTransfer are not available in Teller.</li>
+<li>On Customer.flow tab, check below Source, where you can view the ‘source code’ for the exit point and data flow definitions in the respective source tabs. Both (.event and .flow) are xml and can be integrated to a source control system and versioned.</li>
+<li>The option <strong><em>Event Priority</em></strong> is introduced to set the priority for event delivery of the event type that is under design when using integration service. The default priority is 0 and can be edited to a positive integer. This value gets stored in the EVENT.PRIORITY field of <a href="glossary.html#catalog"><strong>IF.INTEGRATION.FLOW.CATALOG</strong></a> application.</li>
+<li>The <strong><em>Include before image</em></strong> option adds the existing transaction data to the generated event.</li>
+<li>The <strong><em>Process updates only</em></strong> option includes only the changed field value for the current transaction to the event and ignores all other fields while generating the event.</li>
+<li>The <strong><em>Include Digital Signature</em></strong> option publishes the flow with a new attribute “Include Digital Signature” to the flow. This enables the event messages to be digitally signed. The implementation for digitally signing the message need to be implemented by the user and the details are available in the Inbound Security Service User Guide.</li>
+<li>The <strong><em>Display Name</em></strong> column in the Flow Enrichments section is an editable column. Once a T24 field is added to the schema, this column allows to specify a different name to the field only in the flow to make the names more meaningful. This does not change the field name in the underlying application.</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>The options “Include Before Image” and “Process Updates Only” are applicable only for Application, Version and TSA.SERVICE exit points.</p>
+</div>
+<h3 id="flow-wizard-join-optional">Flow Wizard Join (Optional)</h3>
+<p>It is possible to add join field in the flow. A join field is a field that is used to retrieve the related information. To build a join field:</p>
+<p><strong>Example:</strong></p>
+<p>•   Select the field through which the join has to be defined. (Here &#39;ACCOUNT.OFFICER&#39;)</p>
+<p>•   Click on &#39;Add Join&#39; button and a popup window as shown below appears.</p>
+<p>•   Supply an XML-friendly Display Name (Here &#39;AccountOfficerName&#39;)</p>
+<p>•   Select the application from &#39;Application&#39; drop down box from which the join retrieves the data. (Here &#39;DEPT.ACCT.OFFICER&#39;)</p>
+<p>•   Select the field from the &#39;Field Name&#39; drop down box. This is the field from where the join field gets the value. (Here &#39;NAME&#39;)</p>
+<p>•   Click &#39;Add&#39; button to add to the join definition.</p>
+<p><img src="images/flow-wizard-join-customer.png" alt="wizard join customer flow"></p>
+<ul>
+<li><p>You can see Join Definition: e.g. CUSTOMER&gt;ACCOUNT.OFFICER&gt;DEPT.ACCT.OFFICER&gt;NAME</p>
+</li>
+<li><p>Repeat step 3-6 till the join field is completed in the &#39;Join Definition&#39; field.</p>
+</li>
+<li><p>Click <strong>Finish</strong></p>
+</li>
+<li><p>Observe the new Flow Enrichment:</p>
+</li>
+</ul>
+<p><img src="images/new-flow-enrichment.png" alt="new flow enrichment"></p>
+<ul>
+<li>Save all the changes: CTRL + S</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

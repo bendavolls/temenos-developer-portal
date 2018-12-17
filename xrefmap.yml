@@ -1,0 +1,120 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0
+  name: Accounts Provider APIs
+  href: apis/psd2/accounts-v1.html
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountBalance
+  name: getAccountBalance
+  href: apis/psd2/accounts-v1/getAccountBalance.html
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountBalance/operation
+  name: getAccountBalance
+  href: apis/psd2/accounts-v1/getAccountBalance.html#api_server_com_api_v1_0_0_Accounts_Provider_APIs_v1_0_0_getAccountBalance_operation
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountBalanceReport
+  name: getAccountBalanceReport
+  href: apis/psd2/accounts-v1/getAccountBalanceReport.html
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountBalanceReport/operation
+  name: getAccountBalanceReport
+  href: apis/psd2/accounts-v1/getAccountBalanceReport.html#api_server_com_api_v1_0_0_Accounts_Provider_APIs_v1_0_0_getAccountBalanceReport_operation
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountOverview
+  name: getAccountOverview
+  href: apis/psd2/accounts-v1/getAccountOverview.html
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountOverview/operation
+  name: getAccountOverview
+  href: apis/psd2/accounts-v1/getAccountOverview.html#api_server_com_api_v1_0_0_Accounts_Provider_APIs_v1_0_0_getAccountOverview_operation
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountStatus
+  name: getAccountStatus
+  href: apis/psd2/accounts-v1/getAccountStatus.html
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getAccountStatus/operation
+  name: getAccountStatus
+  href: apis/psd2/accounts-v1/getAccountStatus.html#api_server_com_api_v1_0_0_Accounts_Provider_APIs_v1_0_0_getAccountStatus_operation
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getTransactionHistory
+  name: getTransactionHistory
+  href: apis/psd2/accounts-v1/getTransactionHistory.html
+- uid: api.server.com/api/v1.0.0/Accounts Provider APIs/v1.0.0/getTransactionHistory/operation
+  name: getTransactionHistory
+  href: apis/psd2/accounts-v1/getTransactionHistory.html#api_server_com_api_v1_0_0_Accounts_Provider_APIs_v1_0_0_getTransactionHistory_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0
+  name: Funds Transfer Provider APIs
+  href: apis/psd2/funds-transfer-v1.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/createPayment
+  name: createPayment
+  href: apis/psd2/funds-transfer-v1/createPayment.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/createPayment/operation
+  name: createPayment
+  href: apis/psd2/funds-transfer-v1/createPayment.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_createPayment_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/createSEPAPayment
+  name: createSEPAPayment
+  href: apis/psd2/funds-transfer-v1/createSEPAPayment.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/createSEPAPayment/operation
+  name: createSEPAPayment
+  href: apis/psd2/funds-transfer-v1/createSEPAPayment.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_createSEPAPayment_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getPayment
+  name: getPayment
+  href: apis/psd2/funds-transfer-v1/getPayment.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getPayment/operation
+  name: getPayment
+  href: apis/psd2/funds-transfer-v1/getPayment.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_getPayment_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getPaymentTransferList
+  name: getPaymentTransferList
+  href: apis/psd2/funds-transfer-v1/getPaymentTransferList.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getPaymentTransferList/operation
+  name: getPaymentTransferList
+  href: apis/psd2/funds-transfer-v1/getPaymentTransferList.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_getPaymentTransferList_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getPaymentTransferStatus
+  name: getPaymentTransferStatus
+  href: apis/psd2/funds-transfer-v1/getPaymentTransferStatus.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getPaymentTransferStatus/operation
+  name: getPaymentTransferStatus
+  href: apis/psd2/funds-transfer-v1/getPaymentTransferStatus.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_getPaymentTransferStatus_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getSEPAPayment
+  name: getSEPAPayment
+  href: apis/psd2/funds-transfer-v1/getSEPAPayment.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/getSEPAPayment/operation
+  name: getSEPAPayment
+  href: apis/psd2/funds-transfer-v1/getSEPAPayment.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_getSEPAPayment_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/updatePaymentTransfer
+  name: updatePaymentTransfer
+  href: apis/psd2/funds-transfer-v1/updatePaymentTransfer.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/updatePaymentTransfer/operation
+  name: updatePaymentTransfer
+  href: apis/psd2/funds-transfer-v1/updatePaymentTransfer.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_updatePaymentTransfer_operation
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/updateSEPAPaymentTransfer
+  name: updateSEPAPaymentTransfer
+  href: apis/psd2/funds-transfer-v1/updateSEPAPaymentTransfer.html
+- uid: api.server.com/api/v1.0.0/Funds Transfer Provider APIs/v1.0.0/updateSEPAPaymentTransfer/operation
+  name: updateSEPAPaymentTransfer
+  href: apis/psd2/funds-transfer-v1/updateSEPAPaymentTransfer.html#api_server_com_api_v1_0_0_Funds_Transfer_Provider_APIs_v1_0_0_updateSEPAPaymentTransfer_operation
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0
+  name: Payments Provider APIs
+  href: apis/psd2/payments-v1.html
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/createPaymentInitiation
+  name: createPaymentInitiation
+  href: apis/psd2/payments-v1/createPaymentInitiation.html
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/createPaymentInitiation/operation
+  name: createPaymentInitiation
+  href: apis/psd2/payments-v1/createPaymentInitiation.html#api_server_com_api_v1_0_0_Payments_Provider_APIs_v1_0_0_createPaymentInitiation_operation
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/getPaymentOrder
+  name: getPaymentOrder
+  href: apis/psd2/payments-v1/getPaymentOrder.html
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/getPaymentOrder/operation
+  name: getPaymentOrder
+  href: apis/psd2/payments-v1/getPaymentOrder.html#api_server_com_api_v1_0_0_Payments_Provider_APIs_v1_0_0_getPaymentOrder_operation
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/getPaymentOrderList
+  name: getPaymentOrderList
+  href: apis/psd2/payments-v1/getPaymentOrderList.html
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/getPaymentOrderList/operation
+  name: getPaymentOrderList
+  href: apis/psd2/payments-v1/getPaymentOrderList.html#api_server_com_api_v1_0_0_Payments_Provider_APIs_v1_0_0_getPaymentOrderList_operation
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/getPaymentOrderStatus
+  name: getPaymentOrderStatus
+  href: apis/psd2/payments-v1/getPaymentOrderStatus.html
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/getPaymentOrderStatus/operation
+  name: getPaymentOrderStatus
+  href: apis/psd2/payments-v1/getPaymentOrderStatus.html#api_server_com_api_v1_0_0_Payments_Provider_APIs_v1_0_0_getPaymentOrderStatus_operation
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/updatePaymentOrder
+  name: updatePaymentOrder
+  href: apis/psd2/payments-v1/updatePaymentOrder.html
+- uid: api.server.com/api/v1.0.0/Payments Provider APIs/v1.0.0/updatePaymentOrder/operation
+  name: updatePaymentOrder
+  href: apis/psd2/payments-v1/updatePaymentOrder.html#api_server_com_api_v1_0_0_Payments_Provider_APIs_v1_0_0_updatePaymentOrder_operation

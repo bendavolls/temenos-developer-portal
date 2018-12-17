@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UXP 30 Minute Guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UXP 30 Minute Guide ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="UXP 30 Minute Guide ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>This is a short guide to explain the use of UXP and basic steps for installation and development.</p>
+<h1 id="about-uxp">About UXP</h1>
+<p>Creating a basic project can be carried out as a series of stages. Once the basic solution has been created, any of the elements can be amended to enhance the solution.</p>
+<p>Below are the main phases of the development:</p>
+<ol>
+<li>Create Project</li>
+<li>Create Process</li>
+<li>Create Phase<ul>
+<li>add questions</li>
+<li>add text</li>
+<li>add buttons</li>
+</ul>
+</li>
+<li>Create Data Store<ul>
+<li>add data items</li>
+<li>add data groups</li>
+<li>add lists</li>
+</ul>
+</li>
+<li>Associate Data Store with Process</li>
+<li>Create Rules<ul>
+<li>add validation</li>
+<li>add business rules</li>
+<li>add navigation</li>
+</ul>
+</li>
+</ol>
+<p>Although the steps are in the order shown, the order may change depending on your starting point for the process. For example, you may be replacing an existing process for which a database exists. In this case, it may be more convenient to create the data store from the existing database as a first step before creating the process. UXP includes tools which allow you to generate your project from database, web service and XML schema files to help speed up the development process. UXP allows flexibility in approach in order to build the solution in the most efficient way.</p>
+<h1 id="installation">Installation</h1>
+<div class="NOTE"><h5>Note</h5><p>When planning an Enterprise installation, you firstly need to decide who in your organization will perform the above roles as this will determine what UXP components need to be installed on each machine. Although described separately, you can of course allocate all administrative tasks to an individual.</p>
+<p>Once you have defined the roles required, the Enterprise Server components should be installed on the appropriate machine, in the following order:</p>
+<p>• UXP Server</p>
+<p>• Administrator</p>
+<p>• Deployer</p>
+<p>• Developer</p>
+</div>
+<ul>
+<li>Download your Temenos UXP Developer Package from Temenos MarketPlace. This Package contains also some useful user guides. </li>
+<li>Installation overview:<ul>
+<li>Start installation</li>
+<li>Choose install options</li>
+<li>Install</li>
+<li>Obtain License</li>
+<li>Install License</li>
+<li>Complete</li>
+</ul>
+</li>
+</ul>
+<p>Check also <a href="uxp-setup.html"><strong>these steps</strong></a> to see installation process.</p>
+<h1 id="widget-basic-steps-example">Widget Basic Steps Example</h1>
+<ul>
+<li><p>Below are the steps required for a simple widget creation. </p>
+</li>
+<li><p>To develop more complex applications, some knowledge of javascript, jquery and css would be useful.</p>
+</li>
+</ul>
+<h2 id="create-a-widget">Create a Widget</h2>
+<ul>
+<li>Create a folder on D partition. <ul>
+<li>For this user guide, we defined a folder called &#39;UXPProjects&#39;</li>
+</ul>
+</li>
+<li>We will create a new Project called &#39;TestProject&#39;:<ul>
+<li>Go to File &gt; New &gt; New Solution Project</li>
+<li>Add Project Name (<em>TestWgt</em>)</li>
+<li>Select Project Location (<em>D:/UXPProjects</em>)</li>
+<li>Click OK &gt; A new project is created</li>
+<li>Now, in the new screen go to Process Editor &gt; click right on Processes &gt; Add Process</li>
+<li>Give a Process Name (<em>Process1</em>) and click OK</li>
+<li>Click right on <em>Process1</em> &gt; Add Phase</li>
+<li>Give a Phase Name (<em>Phase1</em>) and click OK</li>
+<li>Now, go to Presentation Editor &gt; Click right on Presentations &gt; Add Presentation Type </li>
+<li>Give a Presentation Name (<em>Presentation1</em>) and select Type &gt; Rich HTML &gt; click OK</li>
+<li>Go to Menu bar &gt; Tools &gt; Edit Widgets for Projects</li>
+<li>Click right on Widgets &gt; Add &gt; Widget</li>
+<li>An empty list of attributes is displayed. </li>
+<li>In this list, only <strong>Name</strong> and <strong>Type</strong> are mandatory. You can also add any other attributes<ul>
+<li>Name<em>: *TestWidget</em>
+<em>(The widget name is used in the drop down list of display types in the Presentation Editor when you select a
+display type for an element.)</em></li>
+<li>Type<em>: *Display Item</em>
+<em>(The type specifies the type of element the widget can be applied to.)</em></li>
+</ul>
+</li>
+<li>Click save</li>
+</ul>
+</li>
+<li>Go to the folder created for this project (<em>D:/UXPProjects</em>) and then to Templates folder<ul>
+<li>In Templates folder, create a new folder. The name of this folder is the widget name. Suppose you have a MarketPlace widget, you can name it something like: <em>com.temenos.test</em></li>
+<li>Inside this folder, create a <strong><em>head.wgt</em></strong> (optional) and <strong><em>body.wgt</em></strong> (mandatory) file. </li>
+</ul>
+</li>
+</ul>
+<p><img src="images/body-wgt.png" alt="widget"></p>
+<ul>
+<li>Go back to Tools &gt; Edit Widgets for Project</li>
+<li>Now we can add the Head and the Body of the widget</li>
+<li>Click on Source Template and in Value field, select as source <strong><em>body.wgt</em></strong> (created in Templates folder)</li>
+</ul>
+<p><img src="images/template-body-wgt.png" alt="widget"></p>
+<ul>
+<li>Add another template (this will be automatically recognized as a Header Template)</li>
+<li>Click right on the Widget (<em>TestWidget</em>) &gt; Add &gt; Template</li>
+<li>Click on Header Template and in Value field, select as header <strong><em>header.wgt</em></strong> (created in Templates folder)</li>
+<li>Save </li>
+</ul>
+<p><img src="images/template-header-wgt.png" alt="widget"></p>
+<p>To see how to use a widget, check following <a href="widgets-3-minute.html">Widgets 3 Minute Guide</a>.</p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

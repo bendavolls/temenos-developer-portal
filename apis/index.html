@@ -1,0 +1,1244 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>API Introduction </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="API Introduction ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="API Introduction ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>The MarketPlace Provider Sandbox is exposing a series of REST APIs that can be invoked in order to create, read and/or update records in it. </p>
+<h3 id="authentication">Authentication</h3>
+<p>Temenos API supports Authentication. All the required credentials are communicated separately.</p>
+<h3 id="service-catalog">Service Catalog</h3>
+<p>Service Catalog shows the swagger file content and implicitly all the available operations of a specific API.</p>
+<p><p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseGetServiceCatalog" aria-expanded="false" aria-controls="collapseGetServiceCatalog">
+  <div class="text-left">
+     Get Service Catalog 
+  </div>
+  </button>
+</p>
+<div class="collapse" id="collapseGetServiceCatalog" style="word-break:break-all;">
+  <div class="text-left">
+      <div class="panel panel-info">
+        <div class="panel-heading"><strong>URL</strong></div><p>
+<ul>
+<li><p><code>https://&lt;sandboxId&gt;.temenos.cloud/irf-test-web/api/v1.0.0/meta/apidocs/&lt;apiName&gt;</code></p>
+<p> </li></ul></div>
+</div><p>
+<div class="text-left">
+ <div class="panel panel-info">
+   <div class="panel-heading"><strong>Http Method</strong></div>
+
+<ul>
+<li><p>GET</p>
+<p></li></ul></div>
+</div></p>
+
+
+<div class="text-left">
+ <div class="panel panel-info">
+   <div class="panel-heading"><strong>Http Response Headers</strong></div>
+
+<ul>
+<li><p>Content-Type: &#39;application/json&#39;</p>
+<p></li></ul></div>
+</div><p>
+
+
+<div class="text-left">
+ <div class="panel panel-info">
+   <div class="panel-heading"><strong>Response</strong></div>
+
+<ul>
+<li><p>It will display the schema definition view (the swagger content) of the interrogated API.</p>
+<p></li></ul></div>
+</div>
+</div></p>
+
+
+
+
+<h3 id="domains">Domains</h3>
+<p>Domains are the highest level grouping for APIs.</p>
+<p><p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseDomains" aria-expanded="false" aria-controls="collapseDomains">
+  <div class="text-left">
+     Domains
+  </div>
+  </button>
+</p>
+<div class="collapse" id="collapseDomains">
+  <div class="text-left">
+    <div class="panel panel-info">
+        <div class="panel-heading"><strong>General</strong></div><p>
+<ul>
+<li><p>Domains allow the same resource path to give different result based on domain:</p>
+<ul>
+<li><em>/party/customers/654321</em>: Reference data (names, address, etc.) for customer 654321</li>
+<li><em>/holdings/customers/654321</em>: Collection of holdings for customer 654321</li>
+</ul>
+<p></li></ul></div><br></div>
+<div class="text-left">
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Currrent domains</strong></div><p>
+<ul>
+<li><strong>party</strong>: Master party data; customers, counterparties etc.</li>
+<li><strong>product</strong>: Master product data; products, rates, eligibility etc.</li>
+<li><strong>holdings</strong>: Financial holdings (accounts, arrangements, portfolios, etc.) at party and bank level</li>
+<li><strong>orders</strong>: Order management for all types of orders, e.g. payments, security trading, etc.</li>
+<li><strong>meta</strong>: APIs about APIs; usage, deployment, etc.</li>
+<li><strong>reference</strong>: Reference data; rates, dates, etc.</li>
+</ul>
+<p></div>
+</div>
+</div></p>
+
+
+<h3 id="standard-methods">Standard Methods</h3>
+<p>The following table describes how to map standard methods to HTTP methods:
+<p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseStandardMethods" aria-expanded="false" aria-controls="collapseStandardMethods">
+    <div class="text-left">
+     Standard Methods
+    </div>
+  </button>
+</p>
+<div class="collapse" id="collapseStandardMethods" style="word-break:break-all;">
+ <ul class="list-group">
+  <li class="list-group-item list-group-item-info"><p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Standard Method</th>
+<th style="text-align:left">HTTP Mapping</th>
+<th style="text-align:left">HTTP Request Body</th>
+<th style="text-align:left">HTTP Response Body</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">List</td>
+<td style="text-align:left">GET <collection url=""></collection></td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">Resource list</td>
+</tr>
+<tr>
+<td style="text-align:left">Get</td>
+<td style="text-align:left">GET <resource url=""></resource></td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">Resource</td>
+</tr>
+<tr>
+<td style="text-align:left">Create</td>
+<td style="text-align:left">POST <collection url=""></collection></td>
+<td style="text-align:left">Resource</td>
+<td style="text-align:left">Resource</td>
+</tr>
+<tr>
+<td style="text-align:left">Update</td>
+<td style="text-align:left">PUT <resource url=""></resource></td>
+<td style="text-align:left">Resource</td>
+<td style="text-align:left">Resource</td>
+</tr>
+<tr>
+<td style="text-align:left">Delete</td>
+<td style="text-align:left">DELETE <resource url=""></resource></td>
+<td style="text-align:left">N/A</td>
+<td style="text-align:left">Empty</td>
+</tr>
+</tbody>
+</table>
+<p></li>
+</ul>
+</div></p>
+<h3 id="standard-request-parameters">Standard Request Parameters</h3>
+<p>The following table describes a list of standard parameters used across all APIs:
+<p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseStandardParam" aria-expanded="false" aria-controls="collapseStandardParam">
+    <div class="text-left">
+     Standard Request Parameters
+    </div>
+  </button>
+</p>
+<div class="collapse" id="collapseStandardParam">
+ <ul class="list-group">
+  <li class="list-group-item list-group-item-info"><p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">page_token</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The pagination token in the List request.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">page_size</div></td>
+<td style="text-align:left">int32</td>
+<td style="text-align:left"><div style="word-break:break-all;">The pagination size in the List request.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">page_start</div></td>
+<td style="text-align:left">int32</td>
+<td style="text-align:left"><div style="word-break:break-all;">The pagination start row in the List request</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">total_lastitems</div></td>
+<td style="text-align:left">int32</td>
+<td style="text-align:left"><div style="word-break:break-all;">The last total_lastitems items to be returned in the List request. Mutually exclusive with page_start and page_size</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">total_size</div></td>
+<td style="text-align:left">int32</td>
+<td style="text-align:left"><div style="word-break:break-all;">The total count of items in the list irrespective of pagination.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">request_id</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">A unique string id used for detecting duplicated requests. Optional.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">resume_token</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">An opaque token used for resuming a streaming request. Reserved for future use - not yet implemented.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">validate_only</div></td>
+<td style="text-align:left">bool</td>
+<td style="text-align:left"><div style="word-break:break-all;">If true, it indicates that the given request should only be validated, not executed.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">response_verbosity</div></td>
+<td style="text-align:left">All, Minimal, Properties, Activities</td>
+<td style="text-align:left"><div style="word-break:break-all;">For activity (AA) requests, determines they level of information returned in the response message. <em>All</em> - header information, property and activity information. <em>Minimal</em> - header information. <em>Properties</em> - header information and property information. <em>Activities</em> - header information and activity information.</div></td>
+</tr>
+</tbody>
+</table>
+<p>  </li>
+ </ul>
+</div></p>
+<h3 id="standard-names">Standard Names</h3>
+<p>This section describes a set of standard message field definitions that are used across all APIs.
+<p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseStandardNames" aria-expanded="false" aria-controls="collapseStandardNames">
+    <div class="text-left">
+     Standard Names
+    </div>
+  </button>
+</p>
+<div class="collapse" id="collapseStandardNames">
+ <ul class="list-group">
+  <li class="list-group-item list-group-item-info"><p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Type</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">name</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The name field should contain the relative resource name.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">parent</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">For resource definitions and List/Create requests, the parent field should contain the parent relative resource name.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">create_time</div></td>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left"><div style="word-break:break-all;">The creation timestamp of an entity.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">update_time</div></td>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left"><div style="word-break:break-all;">The last update timestamp of an entity. Note: update_time is updated when create/patch/delete operation is performed.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">delete_time</div></td>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left"><div style="word-break:break-all;">The deletion timestamp of an entity, only if it supports retention.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">expire_time</div></td>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left"><div style="word-break:break-all;">The expiration timestamp of an entity if it happens to expire.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">start_time</div></td>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left"><div style="word-break:break-all;">The timestamp marking the beginning of some time period.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">end_time</div></td>
+<td style="text-align:left">Timestamp</td>
+<td style="text-align:left"><div style="word-break:break-all;">The timestamp marking the end of some time period or operation (regardless of its success).</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">time_zone</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The time zone name. It should be an IANA TZ name, such as &quot;America/Los_Angeles&quot;.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">region_code</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The Unicode country/region code (CLDR) of a location, such as &quot;US&quot; and &quot;419&quot;.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">language_code</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The BCP-47 language code, such as &quot;en-US&quot; or &quot;sr-Latn&quot;.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">mime_type</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">An IANA published MIME type (also referred to as media type).</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">display_name</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The display name of an entity.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">title</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">The official name of an entity, such as company name. It should be treated as the formal version of display_name.</div></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style="word-break:break-all;">description</div></td>
+<td style="text-align:left">string</td>
+<td style="text-align:left"><div style="word-break:break-all;">One or more paragraphs of text description of an entity.</div></td>
+</tr>
+</tbody>
+</table>
+<p>  </li>
+ </ul>
+</div></p>
+<h3 id="return-status-codes">Return Status Codes</h3>
+<p>Each Status-Code returned by API call is described below, including a description of which method(s) it can follow and any meta-information required in the response.</p>
+<p><p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseHttpStatusCode" aria-expanded="false" aria-controls="collapseHttpStatusCode">
+   <div class="text-left">
+     Http Status Code
+   </div>
+  </button>
+</p>
+<div class="collapse" id="collapseHttpStatusCode">
+<ul class="list-group">
+  <li class="list-group-item list-group-item-success"><p>
+<div class="w3-container">
+  <table class="table" style="text-align:left;">
+    <thead>
+      <tr class="success">
+        <th>SUCCESS</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="success">
+        <td>200</td>
+        <td>OK</td>
+        <td>SUCCESS</td>
+      </tr>
+      <tr class="success">
+        <td>201</td>
+        <td>Created</td>
+        <td>Record created in T24</td>
+      </tr>
+      <tr class="danger">
+        <th>ERROR</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr class="danger">
+        <td>400</td>
+        <td><div style="word-break:break-all;">Bad Input</div></td>
+        <td><div style="word-break:break-all;">Wrong data or invalid body contents</div></td>
+      </tr>
+      <tr class="danger">
+        <td>401</td>
+        <td><div style="word-break:break-all;">Unauthorized</div></td>
+        <td><div style="word-break:break-all;">Wrong valid authentication credentials</div></td>
+      </tr>
+      <tr class="danger">
+        <td>403</td>
+        <td><div style="word-break:break-all;">Forbidden</div></td>
+        <td><div style="word-break:break-all;">The server understood the request but refuses to authorize it</div></td>
+      </tr>
+      <tr class="danger">
+        <td>404</td>
+        <td><div style="word-break:break-all;">Resource Not Found</div></td>
+        <td><div style="word-break:break-all;">Requested resource not available in service</div></td>
+      </tr>
+      <tr class="danger">
+        <td>405</td>
+        <td><div style="word-break:break-all;">Method Not Allowed</div></td>
+        <td></td>
+      </tr>
+      <tr class="danger">
+        <td>412</td>
+        <td><div style="word-break:break-all;">Precondition Failed</div></td>
+        <td></td>
+      </tr>
+      <tr class="danger">
+        <td>415</td>
+        <td><div style="word-break:break-all;">Unsupported Media Type</div></td>
+        <td><div style="word-break:break-all;">Check content-type and other http header settings</div></td>
+      </tr>
+      <tr class="danger">
+        <td>500</td>
+        <td><div style="word-break:break-all;">Internal Server Error</div></td>
+        <td><div style="word-break:break-all;">The server encountered an unexpected condition that prevented it from fulfilling the request. Retry the exact same request that triggered this response, and hope to get a different response.</div></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  </li>
+</ul>
+</div>
+
+
+<h3 id="pagination">Pagination</h3>
+<p>Pagination in APIs helps client application to handle responses to easier.
+Pagination is controlled via two parameters, <em>page_size</em> and <em>page_start</em>:</p>
+<ul>
+<li><strong>page-size</strong> - limits the number of records in the api response</li>
+<li><strong>page-start</strong> -  helps to retrieve next set of records.</li>
+</ul>
+<p><p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapsePagination" aria-expanded="false" aria-controls="collapsePagination">
+  <div class="text-left">
+     Pagination
+  </div>
+  </button>
+</p>
+<div class="collapse" id="collapsePagination" style="word-break:break-all;">
+  <div class="text-left">
+    <div class="panel panel-info">
+        <div class="panel-heading"><strong>Sample URL 1</strong></div><p>
+<ul>
+<li><p><code>localhost:8080/api/v1.0.0/provider-accounts/10944/transactions?fromDate=2017-01-01&amp;page_size=5</code></p>
+<p></li></ul></div><br></div><p>
+<div class="text-left">
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Sample Response 1</strong></div>
+    <pre>
+    {
+        "header": {
+            "data": {
+                "accountId": "10944",
+                "currency": "USD"
+            },
+            "audit": {
+                "T24_time": 1554,
+                "parse_time": 4
+            },
+            "page_start": 0,
+            "page_token": "a1f92b0d-4ca0-44f1-8025-b16d417f11a2",
+            "total_size": 39,
+            "page_size": 5
+        },
+        "body": [
+            {
+                "reference": "FT170803R9LY",
+                "amount": 200000,
+                "bookingDate": "2017-03-21",
+                "valueDate": "2017-03-21"
+            },
+            {
+                "reference": "FT17080GCFJJ",
+                "amount": 150000,
+                "bookingDate": "2017-03-21",
+                "valueDate": "2017-03-21"
+            },
+            {
+                "reference": "SCTRSC17080KMQW4",
+                "amount": -2805,
+                "bookingDate": "2017-03-21",
+                "valueDate": "2017-03-21"
+            },
+            {
+                "reference": "SCTRSC1708064H4D",
+                "amount": -70434.35,
+                "bookingDate": "2017-03-21",
+                "valueDate": "2017-03-21"
+            },
+            {
+                "reference": "SCTRSC17086RZV02",
+                "amount": -3263.27,
+                "bookingDate": "2017-03-27",
+                "valueDate": "2017-03-27"
+            }
+        ]
+    }
+    </pre>
+</div>
+</div>
+
+<div class="text-left">
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Sample URL 2</strong></div>
+
+<ul>
+<li><code>localhost:8080/api/v1.0.0/provider-accounts/10944/transactions?fromDate=2017-01-01&amp;page_size=5&amp;page_start=10</code></li>
+</ul>
+<p></div><br></div>
+<div class="text-left">
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Sample Response 2</strong></div><p>
+    <pre>
+    {
+        "header": {
+            "data": {
+                "accountId": "10944",
+                "currency": "USD"
+            },
+            "audit": {
+                "T24_time": 448,
+                "parse_time": 1
+            },
+            "page_start": 10,
+            "page_token": "a9b3fc6b-3f39-4925-8c6e-542e9fa238fd",
+            "total_size": 39,
+            "page_size": 5
+        },
+        "body": [
+            {
+                "reference": "FT17086WV7YX",
+                "amount": 200000,
+                "bookingDate": "2017-03-27",
+                "valueDate": "2017-03-27"
+            },
+            {
+                "reference": "SCTRSC17088S0BZW",
+                "amount": -22792.77,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            },
+            {
+                "reference": "FT1708899Y3D",
+                "amount": 75000,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            },
+            {
+                "reference": "SCTRSC17088RFNT2",
+                "amount": -6928.71,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            },
+            {
+                "reference": "SCTRSC17088ZP11W",
+                "amount": -49171.54,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            }
+        ]
+    }
+    </pre>
+<p></div>
+</div>
+</div></p>
+
+
+<h3 id="caching">Caching</h3>
+<p>Caching is controlled via the parameter <em>page_token</em>.</p>
+<p><p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseCaching" aria-expanded="false" aria-controls="collapseCaching">
+  <div class="text-left">
+     Caching
+  </div>
+  </button>
+</p>
+<div class="collapse" id="collapseCaching" style="word-break:break-all;">
+  <div class="text-left">
+    <div class="panel panel-info">
+        <div class="panel-heading"><strong>Sample URL</strong></div><p>
+<ul>
+<li><p><code>localhost:8080/api/v1.0.0/provider-accounts/10944/transactions?fromDate=2017-01-01&amp;page_size=5&amp;page_start=10&amp;page_token=dbf26a4b-0bd3-4407-8e25-ae406c6e3b57</code></p>
+<p></li></ul></div>
+<em>Note: There is no T24_time element to the audit, as the request has been served from cache.</em><br></div><p>
+<div class="text-left">
+<div class="panel panel-info">
+    <div class="panel-heading"><strong>Sample Response</strong></div>
+    <pre>
+    {
+        "header": {
+            "data": {
+                "accountId": "10944",
+                "currency": "USD"
+            },
+            "audit": {
+                "parse_time": 4
+            },
+            "page_start": 10,
+            "page_token": "dbf26a4b-0bd3-4407-8e25-ae406c6e3b57",
+            "total_size": 39,
+            "page_size": 5
+        },
+        "body": [
+            {
+                "reference": "FT17086WV7YX",
+                "amount": 200000,
+                "bookingDate": "2017-03-27",
+                "valueDate": "2017-03-27"
+            },
+            {
+                "reference": "SCTRSC17088S0BZW",
+                "amount": -22792.77,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            },
+            {
+                "reference": "FT1708899Y3D",
+                "amount": 75000,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            },
+            {
+                "reference": "SCTRSC17088RFNT2",
+                "amount": -6928.71,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            },
+            {
+                "reference": "SCTRSC17088ZP11W",
+                "amount": -49171.54,
+                "bookingDate": "2017-03-29",
+                "valueDate": "2017-03-29"
+            }
+        ]
+    }
+    </pre>
+</div>
+</div>
+</div>
+
+
+
+
+
+<h3 id="code-samples">Code Samples</h3>
+<p>Please find below some code samples in different programming languages.</p>
+<p><p>
+  <button class="btn btn-info btn-md btn-block" type="button" data-toggle="collapse" data-target="#collapseCode" aria-expanded="false" aria-controls="collapseCode">
+  <div class="text-left">
+     Code Samples
+  </div>
+  </button>
+</p>
+<div class="collapse" id="collapseCode" style="word-break:break-all;">
+  <div class="text-left">
+    <div class="panel panel-info">
+        <div class="panel-heading"><strong>Note</strong></div><p>
+<ul>
+<li><p>In the code samples below are used:</p>
+<ul>
+<li>2 headers</li>
+<li>3 parameters
+, but it can be less or more of them.</li>
+</ul>
+<p></li></ul></div>
+</div>
+<div align="left">
+  <div class="panel panel-info">
+  <div class="panel-heading"><strong>Code Samples</strong></div><p>
+
+
+<p><section class="design-process-section" id="process-tab">
+    <div class="row">
+      <div class=".col-xs-12 .col-sm-6 .col-md-8"> 
+        <!-- design process steps--> 
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+          <li role="presentation" class="active"><a href="#curl" aria-controls="curl" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>Curl</p>
+            </a></li>
+          <li role="presentation"><a href="#csharp" aria-controls="csharp" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>C#</p>
+            </a></li>
+          <li role="presentation"><a href="#java" aria-controls="java" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>Java</p>
+            </a></li>
+          <li role="presentation"><a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>JavaScript</p>
+            </a></li>
+          <li role="presentation"><a href="#objc" aria-controls="objc" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>ObjC</p>
+            </a></li>
+          <li role="presentation"><a href="#php" aria-controls="php" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>PHP</p>
+            </a></li>
+          <li role="presentation"><a href="#python" aria-controls="python" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>Python</p>
+            </a></li>
+          <li role="presentation"><a href="#ruby" aria-controls="ruby" role="tab" data-toggle="tab"><i aria-hidden="true"></i>
+            <p>Ruby</p>
+            </a></li>
+        </ul>
+        <!-- end design process steps--> 
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="curl">
+            <div class="design-process-content">
+                <p>
+                    &nbsp;&nbsp;<code>curl -v -X GET &lt;required_url&gt;?parameterName1={parameterValue1}&amp;parameterName2={parameterValue2}parameterName3={parameterValue3}</code><br>
+                    &nbsp;&nbsp;<code>-H &quot;&lt;headerName1&gt;: {headerValue1}&quot;</code><br>
+                    &nbsp;&nbsp;<code>-H &quot;&lt;headerName2&gt;: {headerValue2}&quot;</code><br>
+                    &nbsp;&nbsp;<code>--data-ascii &quot;{body}&quot;</code>
+                </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="csharp">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>using System;</code><br>
+                    &nbsp;&nbsp;<code>using System.Net.Http.Headers;</code><br>
+                    &nbsp;&nbsp;<code>using System.Text;</code><br>
+                    &nbsp;&nbsp;<code>using System.Net.Http;</code><br>
+                    &nbsp;&nbsp;<code>using System.Web;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>namespace CSHttpClientSample</code><br>
+                    &nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>static class Program</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>static void Main()</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>MakeRequest();</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Console.WriteLine(&quot;Hit ENTER to exit...&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>Console.ReadLine();</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;<code>static async void MakeRequest()</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>var client = new HttpClient();</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>var queryString = HttpUtility.ParseQueryString(string.Empty);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request headers</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>client.DefaultRequestHeaders.Add(&quot;&lt;headerName1&gt;&quot;, &quot;{headerValue1}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>client.DefaultRequestHeaders.Add(&quot;&lt;headerName2&gt;&quot;, &quot;{headerValue2}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>queryString[&quot;parameterName1&quot;] = &quot;{parameterValue1}&quot;;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>queryString[&quot;parameterName2&quot;] = &quot;{parameterValue2}&quot;;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>queryString[&quot;parameterName3&quot;] = &quot;{parameterValue3}&quot;;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>var uri = &quot;&lt;required_url&gt;?&quot; + queryString;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>var response = await client.GetAsync(uri);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// or    var response = await client.DeleteAsync(uri);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// or   var response = await client.PostAsync(uri, content);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// or   var response = await client.PutAsync(uri, content);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;<code>}</code>
+              </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="java">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>// This sample uses the Apache HTTP client from HTTP Components</code><br>
+                    &nbsp;&nbsp;<code>// (http://hc.apache.org/httpcomponents-client-ga/)</code><br>
+                    &nbsp;&nbsp;<code>import java.net.URI;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.HttpEntity;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.HttpResponse;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.client.HttpClient;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.client.methods.HttpGet;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.client.utils.URIBuilder;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.impl.client.HttpClients;</code><br>
+                    &nbsp;&nbsp;<code>import org.apache.http.util.EntityUtils;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>public class JavaSample</code><br>
+                    &nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>public static void main(String[] args)</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>HttpClient httpclient = HttpClients.createDefault();</code><br>
+                    &nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;<code>try</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>URIBuilder builder = new URIBuilder(&quot;&lt;required_url&gt;&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>builder.setParameter(&quot;parameterName1&quot;, &quot;{parameterValue1}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>builder.setParameter(&quot;parameterName2&quot;, &quot;{parameterValue2}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>builder.setParameter(&quot;parameterName3&quot;, &quot;{parameterValue3}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>URI uri = builder.build();</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>HttpGet request = new HttpGet(uri);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>request.setHeader(&quot;&lt;headerName1&gt;&quot;, &quot;{headerValue1}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>request.setHeader(&quot;&lt;headerName2&gt;&quot;, &quot;{headerValue2}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request body</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>StringEntity reqEntity = new StringEntity(&quot;{body}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>request.setEntity(reqEntity);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>HttpResponse response = httpclient.execute(request);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>HttpEntity entity = response.getEntity();</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>if (entity != null)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>System.out.println(EntityUtils.toString(entity));</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>catch (Exception e)</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>System.out.println(e.getMessage());</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;<code>}</code>
+              </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="javascript">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>&lt;!DOCTYPE html&gt;</code><br>
+                    &nbsp;&nbsp;<code>&lt;html&gt;</code><br>
+                    &nbsp;&nbsp;<code>&lt;head&gt;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;title&gt;JSSample&lt;/title&gt;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js&quot;&gt;&lt;/script&gt;</code><br>
+                    &nbsp;&nbsp;<code>&lt;/head&gt;</code><br>
+                    &nbsp;&nbsp;<code>&lt;body&gt;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>&lt;script type=&quot;text/javascript&quot;&gt;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>$(function() {</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>var params = {</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>// Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&quot;parameterName1&quot;: &quot;{parameterValue1}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&quot;parameterName2&quot;: &quot;{parameterValue2}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>&quot;parameterName3&quot;: &quot;{parameterValue3}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>};</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$.ajax({</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>url: &quot;&lt;required_url&gt;?&quot; + $.param(params),</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>beforeSend: function(xhrObj){</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>// Request headers</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>xhrObj.setRequestHeader(&quot;&lt;headerName1&gt;&quot;,&quot;{headerValue1}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>xhrObj.setRequestHeader(&quot;&lt;headerName2&gt;&quot;,&quot;{headerValue2}&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>},</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>type: &quot;GET&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>// Request body</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>data: &quot;{body}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>})</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>.done(function(data) {</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>alert(&quot;success&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>})</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>.fail(function() {</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>alert(&quot;error&quot;);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>});</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>});</code><br>
+                    &nbsp;&nbsp;<code>&lt;/script&gt;</code><br>
+                    &nbsp;&nbsp;<code>&lt;/body&gt;</code><br>
+                    &nbsp;&nbsp;<code>&lt;/html&gt;</code>
+              </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="objc">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>#import &lt;Foundation/Foundation.h&gt;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>int main(int argc, const char * argv[])</code><br>
+                    &nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSString* path = @&quot;&lt;requested_url&gt;&quot;;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSArray* array = @[</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>// Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>@&quot;entities=true&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>@&quot;parameterName1={parameterValue1}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>@&quot;parameterName2={parameterValue2}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>@&quot;parameterName3={parameterValue3}&quot;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSString* string = [array componentsJoinedByString:@&quot;&amp;&quot;];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>path = [path stringByAppendingFormat:@&quot;?%@&quot;, string];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSLog(@&quot;%@&quot;, path);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSMutableURLRequest* _request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:path]];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>[_request setHTTPMethod:@&quot;GET&quot;];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request headers</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>[_request setValue:@&quot;{headerValue1}&quot; forHTTPHeaderField:@&quot;&lt;headerName1&gt;&quot;];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>[_request setValue:@&quot;{headerValue2}&quot; forHTTPHeaderField:@&quot;&lt;headerName2&gt;&quot;];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request body</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>[_request setHTTPBody:[@&quot;{body}&quot; dataUsingEncoding:NSUTF8StringEncoding]];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSURLResponse *response = nil;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSError *error = nil;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>NSData* _connectionData = [NSURLConnection sendSynchronousRequest:_request returningResponse:&amp;response error:&amp;error];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>if (nil != error)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSLog(@&quot;Error: %@&quot;, error);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>else</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSError* error = nil;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSMutableDictionary* json = nil;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSString* dataString = [[NSString alloc] initWithData:_connectionData encoding:NSUTF8StringEncoding];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSLog(@&quot;%@&quot;, dataString);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>if (nil != _connectionData)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>json = [NSJSONSerialization JSONObjectWithData:_connectionData options:NSJSONReadingMutableContainers error:&amp;error];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>if (error || !json)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSLog(@&quot;Could not parse loaded json with error:%@&quot;, error);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>NSLog(@&quot;%@&quot;, json);</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>_connectionData = nil;</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;    <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>[pool drain];</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>return 0;</code><br>
+                    &nbsp;&nbsp;<code>}</code>
+              </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="php">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>&lt;?php</code><br>
+                    &nbsp;&nbsp;<code>// This sample uses the Apache HTTP client from HTTP Components</code><br>
+                    &nbsp;&nbsp;<code>//(http://hc.apache.org/httpcomponents-client-ga/)</code><br>
+                    &nbsp;&nbsp;<code>require_once &#39;HTTP/Request2.php&#39;;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>$request = new Http_Request2(&#39;&lt;required_url&gt;&#39;);</code><br>
+                    &nbsp;&nbsp;<code>$url = $request-&gt;getUrl();</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>$headers = array(</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request headers</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;&lt;headerName1&gt;&#39; =&gt; &#39;{headerValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;&lt;headerName2&gt;&#39; =&gt; &#39;{headerValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;<code>);</code><br>
+                    &nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;<code>$request-&gt;setHeader($headers);</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>$parameters = array(</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>// Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName1&#39; =&gt; &#39;{parameterValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName2&#39; =&gt; &#39;{parameterValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName3&#39; =&gt; &#39;{parameterValue3}&#39;,</code><br>
+                    &nbsp;&nbsp;<code>);</code><br>
+                    &nbsp;&nbsp;<br>
+                    &nbsp;&nbsp;<code>$url-&gt;setQueryVariables($parameters);</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>$request-&gt;setMethod(HTTP_Request2::METHOD_GET);</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>// Request body</code><br>
+                    &nbsp;&nbsp;<code>$request-&gt;setBody(&quot;{body}&quot;);</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>try</code><br>
+                    &nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>$response = $request-&gt;send();</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>echo $response-&gt;getBody();</code><br>
+                    &nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp;<code>catch (HttpException $ex)</code><br>
+                    &nbsp;&nbsp;<code>{</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>echo $ex;</code><br>
+                    &nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>?&gt;</code>
+              </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="python">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>########### Python 2.7 #############</code><br>
+                    &nbsp;&nbsp;<code>import httplib, urllib, base64</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>headers = {</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code># Request headers</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;&lt;headerName1&gt;&#39;: &#39;{headerValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;&lt;headerName2&gt;&#39;: &#39;{headerValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>params = urllib.urlencode({</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code># Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName1&#39;: &#39;{parameterValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName2&#39;: &#39;{parameterValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName3&#39;: &#39;{parameterValue3}&#39;,</code><br>
+                    &nbsp;&nbsp;<code>})</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>try:</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>conn = httplib.HTTPSConnection(&#39;&lt;sandboxId&gt;.temenos.cloud&#39;)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>conn.request(&quot;GET&quot;, &quot;&lt;required_url_without_sandboxId&gt;?%s&quot; % params, &quot;{body}&quot;, headers)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>response = conn.getresponse()</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>data = response.read()</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>print(data)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>conn.close()</code><br>
+                    &nbsp;&nbsp;<code>except Exception as e:</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>print(&quot;[Errno {0}] {1}&quot;.format(e.errno, e.strerror))</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>####################################</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>########### Python 3.2 #############</code><br>
+                    &nbsp;&nbsp;<code>import http.client, urllib.request, urllib.parse, urllib.error, base64</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>headers = {</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code># Request headers</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;&lt;headerName1&gt;&#39;: &#39;{headerValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;&lt;headerName2&gt;&#39;: &#39;{headerValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;<code>}</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>params = urllib.parse.urlencode({</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code># Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName1&#39;: &#39;{parameterValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName2&#39;: &#39;{parameterValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName3&#39;: &#39;{parameterValue3}&#39;,</code><br>
+                    &nbsp;&nbsp;<code>})</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>try:</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>conn = http.client.HTTPSConnection(&#39;&lt;sandboxId&gt;.temenos.cloud&#39;)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>conn.request(&quot;GET&quot;, &quot;&lt;required_url_without_sandboxId&gt;?%s&quot; % params, &quot;{body}&quot;, headers)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>response = conn.getresponse()</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>data = response.read()</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>print(data)</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>conn.close()</code><br>
+                    &nbsp;&nbsp;<code>except Exception as e:</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>print(&quot;[Errno {0}] {1}&quot;.format(e.errno, e.strerror))</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>####################################</code>
+              </p>
+            </div>
+          </div>
+          <div role="tabpanel" class="tab-pane" id="ruby">
+            <div class="design-process-content">
+              <p>
+                    &nbsp;&nbsp;<code>require &#39;net/http&#39;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>uri = URI(&#39;&lt;required_url&gt;&#39;)</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>query = URI.encode_www_form({</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code># Request parameters</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName1&#39; =&gt; &#39;{parameterValue1}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName2&#39; =&gt; &#39;{parameterValue2}&#39;,</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>&#39;parameterName3&#39; =&gt; &#39;{parameterValue3}&#39;</code><br>
+                    &nbsp;&nbsp;<code>})</code><br>
+                    &nbsp;&nbsp;<code>if query.length &gt; 0</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>if uri.query &amp;&amp; uri.query.length &gt; 0</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>uri.query += &#39;&amp;&#39; + query</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>else</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>uri.query = query</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>end</code><br>
+                    &nbsp;&nbsp;<code>end</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>request = Net::HTTP::Get.new(uri.request_uri)</code><br>
+                    &nbsp;&nbsp;<code># Request headers</code><br>
+                    &nbsp;&nbsp;<code>request[&#39;&lt;headerName1&gt;&#39;] = &#39;{headerValue1}&#39;</code><br>
+                    &nbsp;&nbsp;<code>request[&#39;&lt;headerName2&gt;&#39;] = &#39;{headerValue2}&#39;</code><br>
+                    &nbsp;&nbsp;<code># Request body</code><br>
+                    &nbsp;&nbsp;<code>request.body = &quot;{body}&quot;</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>response = Net::HTTP.start(uri.host, uri.port, :use_ssl =&gt; uri.scheme == &#39;https&#39;) do |http|</code><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<code>http.request(request)</code><br>
+                    &nbsp;&nbsp;<code>end</code><br>
+                    &nbsp;&nbsp; <br>
+                    &nbsp;&nbsp;<code>puts response.body</code>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+      </div>
+</div>
+</div></p>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

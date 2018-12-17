@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Temenos Channels API Listing </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Temenos Channels API Listing ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Temenos Channels API Listing ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="list-of-channels-api">List of Channels API</h1>
+
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>API Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Accounts</strong></td>
+<td>enqTcAccounts</td>
+<td>Gets the online actual balance and real balance for accounts. The Account Id (e.g. 77607) or the Arrangement Id (e.g. AA16082HV490) are valid inputs into the search selection, alternatively not entering anything into the selection fields will return a list of all active accounts.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofAccounts</td>
+<td>Gets product condition information for AA accounts, lending and deposit products. The information retrieved relates to the following: Details about when product was opened – date and balance; Limit information – available and approved overdraft, limit expiry date, shared limit accounts; Tax Rate; Interest Details – interest type, interest rate(s); Payment Details – payment frequency, payment type and method, payment schedule; Balance information – available funds, outstanding overdraft limit&quot;</td>
+</tr>
+<tr>
+<td><strong>Adverts</strong></td>
+<td>enqTcNofCrOpportunitys</td>
+<td>Gets the list of opportunities available for customers and the related details of opportunities/campaigns that have been specifically targeted towards the needs of the customers.</td>
+</tr>
+<tr>
+<td></td>
+<td>verCrOpportunity_Tcs</td>
+<td>A campaign generator to determine which product specific opportunities/adverts to display to a customer (external user). The service allows users to create inbound and outbound campaigns for various product types towards target customers.</td>
+</tr>
+<tr>
+<td><strong>Alerts</strong></td>
+<td>enqTcEbAlertRequests</td>
+<td>Gets the list of alerts request and their details for a given account/customer.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofGetEligibleEvents</td>
+<td>Service allows subscription to an alert as well as being able to unsubscribe from an alert.</td>
+</tr>
+<tr>
+<td></td>
+<td>verEbAlertRequest_Tcs</td>
+<td>Used to create, update and retrieve details of an alert request.</td>
+</tr>
+<tr>
+<td></td>
+<td>verDeCustomerPreferences_Tcs</td>
+<td>Used to record the customer’s preferred option for receiving notifications or alerts from the Bank. Typical examples may include email, sms, secure message.</td>
+</tr>
+<tr>
+<td><strong>Arrangements</strong></td>
+<td>enqTcAaProducts</td>
+<td>Gets details of all products that the customer satisfies the eligibility rules for. Each product will have eligibility rules that the customer will need to satisfy in order to qualify to take the product out. Where the customer satisfies the criteria for the product then all product information will be displayed.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcPeriodicInterests</td>
+<td>Gets the periodic interest rates for each currency for any time period as defined by the user. These time periods can be defined either in months e.g. 3 months or in days e.g. 7 days.</td>
+</tr>
+<tr>
+<td></td>
+<td>verAaPrdCatInterest_Tcs</td>
+<td>This service reads Interest Condition at Product level for a dated arrangement. A product defined and processed in AA can have multiple interest properties defined (e.g. principal interest, penalty interest, commission, etc.).The number of interest properties is determined by the users defining the products.</td>
+</tr>
+<tr>
+<td></td>
+<td>verAaArrangementActivity_Tcs</td>
+<td>Used to create, update and retrieve details of an Arrangement Activity.</td>
+</tr>
+<tr>
+<td><strong>Beneficiary</strong></td>
+<td>enqTcNofBeneficiarys</td>
+<td>Gets the list of beneficiaries(payees) and their details for a given customer.</td>
+</tr>
+<tr>
+<td></td>
+<td>verBeneficiary_Tcs</td>
+<td>The service allows a user to create and maintain Beneficiary information for automated payment services which can then be defaulted into funds transfer and standing order, thus avoiding having to enter the same information each time a payment is created. This information will be used by the payment order application to enable a financial institution to make a payment or series of payments to a third party. Two types of Beneficiaries can be entered: Customer defined and Bank defined. The customer provides relevant debit i.e. transaction type, customer number and credit details i.e. beneficiary account number and sort code.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcBeneficiaryUtilitys</td>
+<td>Gets the list of utility beneficiaries for a given customer. The customer needs to be passed in as a valid Customer Id. Not providing a Customer Id will return an error message.</td>
+</tr>
+<tr>
+<td><strong>Cards</strong></td>
+<td>enqTcCardIssues</td>
+<td>Gets the details of the cards owned by a given account.</td>
+</tr>
+<tr>
+<td></td>
+<td>verCardIssue_Tcs</td>
+<td>Used to create, update and retrieve details of a card.</td>
+</tr>
+<tr>
+<td><strong>Cheques</strong></td>
+<td>enqTcChequeRegisterSupplements</td>
+<td>The Cheque register holds details of the cheque holdings of all accounts on the system. The service gets details from the cheque register of cheques that have been issued, stopped, cleared and cancelled.</td>
+</tr>
+<tr>
+<td></td>
+<td>verPaymentStop_Tcs</td>
+<td>This service is used to record a stopped cheque for an account.</td>
+</tr>
+<tr>
+<td><strong>Common</strong></td>
+<td>enqTcNofUserRights</td>
+<td>Gets the licensed products availability and TC Operation values from AA user rights property of Internet Services Line. Results are only displayed for the External User logged in as.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcCurrencys</td>
+<td>Gets details of each individual currency set up in the system. The following details are retrieved: the currency name, code and market, together with information for the buy and sell rates.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcDates</td>
+<td>A date record exists for each company. This service gets the Company Id and contains the run dates for the previous, current and the next working day.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcEbLookups</td>
+<td>Gets the EB Lookup records based on the specific look up type.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcCountrys</td>
+<td>Retrieves Country information set up in the system – the Country Code e.g. GB and the Country name e.g. Great Britain</td>
+</tr>
+<tr>
+<td><strong>Customer Profile</strong></td>
+<td>enqTcCustomers</td>
+<td>Gets the contact details of the Customer who logged in. In addition, the following profile information is also returned: date of birth, Customer status and description, Customer Id.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofProductsBalances</td>
+<td>Gets the total sum of balances for the available products of the customer with respect to AA product lines like Accounts, Deposits &amp; Loans.</td>
+</tr>
+<tr>
+<td></td>
+<td>verCustomer_Tcs</td>
+<td>This service is used to create a New Customer Profile, make amendments or update, validate and authorise the same.</td>
+</tr>
+<tr>
+<td><strong>Deposits</strong></td>
+<td>enqTcAaDeposits</td>
+<td>This Service returns the List of deposits that have been opened. The Id needs to be passed in as a valid T24 Arrangement Id. Not providing a filter Id will return all the deposits from T24.The application will be secured via the standard mechanisms of the Temenos Core Banking System.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofAaDeposits</td>
+<td>This Service returns an arrangement overview of the deposit for the given Arrangement Id. The Arrangement Id needs to be passed in as a valid T24 Arrangement Id. By not providing a valid Arrangement Id, the system will return an error message.</td>
+</tr>
+<tr>
+<td><strong>Direct Debits</strong></td>
+<td>enqTcDirectDebitss</td>
+<td>This service returns the list of direct debits maintained by external customer. Valid account number needs to be passed in as Id. Not providing a filter Id will return all the direct debits from T24.</td>
+</tr>
+<tr>
+<td></td>
+<td>verDdDdi_Tcs</td>
+<td>This service is used to cancel or amend an existing direct debit or capture a new direct debit mandate where information such as Customer Bank sort code, Customer Account name, Account number, clearing reference, mandate status etc. is populated into the form. The Claim can be &quot;Outward&quot; i.e. Claim is sent to the Customer&#39;s Bank or Inward Claim i.e. another Bank submit their claim. Currently the Outward claim processing is supported through the Direct Debit module &amp; the Inward claim has to be handled through a local interface. The account number is entered into the input field and this will either retrieve an existing record or create a new record for a new direct debit.</td>
+</tr>
+<tr>
+<td><strong>Images</strong></td>
+<td>enqTcImDocumentImages</td>
+<td>Gets all uploaded images across all applications. Users can search using the ImageReference that was used to upload the image. Examples of references vary from customer or account number to a funds transfer reference.</td>
+</tr>
+<tr>
+<td></td>
+<td>verImDocumentImage_Tcs</td>
+<td>This service is used to define and store individual images (create / remove / amend the Im document image record). It allows great flexibility in defining images as there is no restriction on the type of application or field to which the stored image is related.</td>
+</tr>
+<tr>
+<td></td>
+<td>verImDocumentUpload_Tcs</td>
+<td>This service allows a user to take a chosen image or document (i.e. signature, photo etc.) and upload it so that it can be displayed with a specific application such as CUSTOMER, ACCOUNT etc. which the system will then store.</td>
+</tr>
+<tr>
+<td><strong>Loans</strong></td>
+<td>enqTcAaLoans</td>
+<td>Gets the list of Loans and its details.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofAaLoanOverviews</td>
+<td>Gets the loan arrangement data using the following 4 mandatory fields: the Arrangement Id of the loan, the DateFrom, the DateTo and the Balance Type used to get the overdue details (e.g. TOTALDUE).</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofAaPaymentSchedules</td>
+<td>Gets the list of scheduled payments of a loan The  arrangement id of the loan is mandatory.</td>
+</tr>
+<tr>
+<td><strong>Login</strong></td>
+<td>enqTcEbExternalUsers</td>
+<td>This Service returns the details of the external user logged in. There is no filter needed to be passed in as it is defined within the API to take the logged in external user using common variable in T24.</td>
+</tr>
+<tr>
+<td></td>
+<td>verEbExternalUser_Tcs</td>
+<td>This service allows users to create a new record or update an existing record for access to internet services. The External User Id is required to be passed along with user status which is mandatory input.</td>
+</tr>
+<tr>
+<td><strong>Messages</strong></td>
+<td>enqTcEbSecureMessage</td>
+<td>Gets the list of messages from the Bank to the Customer. Customer number needs to be passed in as a valid Customer Id. Not providing a filter Id will return all the messages from the system.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcEbSecureMessageRead</td>
+<td>This service returns the list of messages sent from external user. Customer number needs to be passed in as a valid Customer Id. Not providing a filter Id will return all the messages from the system.</td>
+</tr>
+<tr>
+<td></td>
+<td>verEbSecureMessage_Tcs</td>
+<td>This service is used to compose a new message, validate and authorise a record.</td>
+</tr>
+<tr>
+<td></td>
+<td>verEbSecureMessage_TcReply</td>
+<td>This service is used to reply to a received message, validate and authorise a record.</td>
+</tr>
+<tr>
+<td><strong>Payment Order</strong></td>
+<td>enqTcDeBics</td>
+<td>Gets details such as bank, branch, city, country, name of national code for Bank Identifier Codes.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcInIbanPluss</td>
+<td>Gets details on the IBAN Id for a financial institution.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcInIbanStructures</td>
+<td>Gets details of the IBAN Country Code.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcPaymentOrderCountryRuless</td>
+<td>Gets the respective country rules for payment order. The country code can be input into the Id selection field to retrieve the specific country rules for payment order, alternatively no input will return all country rules.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcPaymentOrders</td>
+<td>Gets the list of payment orders that have been entered into the system.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcPaymentOrderProducts</td>
+<td>Gets details on Payment Order products.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcPaymentPurposeCodes</td>
+<td>Gets list of Transaction Codes and descriptions for the purpose of the payment transaction.</td>
+</tr>
+<tr>
+<td></td>
+<td>verPaymentOrder_Tcs</td>
+<td>This service captures payment orders from their respective source and puts the order information into a structured and recognised format based on ISO 20022 (XML) and delivers the orders to a payment engine for onward processing.</td>
+</tr>
+<tr>
+<td><strong>Standing Order</strong></td>
+<td>enqTcStandingOrders</td>
+<td>This service returns the list of standing orders for an external customer. Customer number needs to be passed in as a valid customer Id. Not providing a filter Id will return all the standing orders.</td>
+</tr>
+<tr>
+<td></td>
+<td>verStandingOrder_Tc</td>
+<td>This service is used to compose a new, validate, authorise, amend and delete STO record.</td>
+</tr>
+<tr>
+<td><strong>Transaction List</strong></td>
+<td>enqTcNofTxnsLists</td>
+<td>This Service returns the details of the transactions list for any particular account or recent transactions. The service is used to list completed transactions / pending transactions and search transactions. There are various optional filters and a mandatory filter being ListType for the API.</td>
+</tr>
+<tr>
+<td></td>
+<td>enqTcNofTxnsOverviews</td>
+<td>Gets a statement or transaction overview for a customer’s account.</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

@@ -1,0 +1,315 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>UXP Getting Started Guide </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="UXP Getting Started Guide ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="UXP Getting Started Guide ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>This user guide shows how to install Temenos User Experience in order to be able to use Temenos Mobile Banking application.</p>
+<h1 id="pre-requisites">Pre-requisites</h1>
+<ul>
+<li>Download JDK from following <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" title="JDK">link</a> and install the application</li>
+</ul>
+<h1 id="installation-steps">Installation Steps</h1>
+<ul>
+<li>Create a folder where Temenos UXP should be installed</li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p><span class="emoji" shortcode="bulb">💡</span> In order to avoid Windows problems, please use short paths.</p>
+</div>
+<p><strong>Example</strong>: For the purpose of this document, a folder called E6111 is created directly on D partion.</p>
+<ul>
+<li><strong>Unzip</strong> Temenos UXP folder and <strong>launch</strong> UXP installation (double click on appropriate install.exe file - example: TemenosUXP6_1_1__1_x64Windows)</li>
+<li>UXP installation starts (<em>InstallAnywhere is preparing to install...</em>)</li>
+<li>Click next to pass through installation steps. </li>
+<li>On License Agreement, accept Terms and Agreements</li>
+<li>On Install Set, you can also check &#39;Hybrid Master&#39; and &#39;Hybrid Android Slave&#39; if you need it (in this case, Install Set will automatically change to &#39;Custom&#39;)</li>
+<li>On Install Folder, <strong>do not leave default path</strong>. Instead, <strong>select</strong> the folder you created before (for UXP installation)</li>
+<li><p>Choose UXP shortcut location:
+<em>example: &quot;In a new Program Group&quot;</em></p>
+<ul>
+<li>Choose a JDK version 1.8 (select the path where you previously installed Java Development Kit)</li>
+</ul>
+</li>
+<li><p>Set the address and the port:</p>
+<ul>
+<li>Hybrid Master address: <em>localhost</em></li>
+<li>Hybrid Master port: <em>9022</em></li>
+<li>See all information in pre-installation summary and press install button</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>Wait for installation to be completed. </li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>Send license request attaching InstallKey.txt to any of our MarketPlace team members. (InstallKey.txt is in IDE folder).</p>
+<p>You will receive one or two license files, which must be placed in the same folder (IDE)</p>
+</div>
+<ul>
+<li><p>Install TemenosUpdate.zip file</p>
+<p>a.   Unzip the <strong>TemenosUXP6_1_1__1Release_TemenosUpdate.zip</strong> archive received.</p>
+<p>b.   Copy the <strong>jars</strong> from the archive into the <strong>lib</strong> folder of Temenos UXP (<em>in current case E6111 - in your case, the folder you created to install Temenos UXP</em>).</p>
+</li>
+</ul>
+<p><img src="images/copy-lib-files.png" alt="installation complete"></p>
+<p>   c.   Update <strong>Developer.lax</strong> file (<em>from IDE folder</em>) in order to add the jars copied in above step. Click right on developer.lax file, go to &quot;lax.class.path=&quot; and add the new jars as follows: </p>
+<pre><code>  ;../lib/commons-codec-1.10.jar;../lib/commons-lang3-3.5.jar;../lib/core4j-0.5.jar;../lib/ecTemenos.jar;../lib/jdom2-2.0.6.jar;../lib/joda-time-2.1.jar;../lib/odata4j-core.jar;../lib/odata4j-jersey.jar
+</code></pre><div class="NOTE"><h5>Note</h5><p>Based on the version you&#39;re using, you might have other jars to copy.</p>
+</div>
+<ul>
+<li><p>Install CustomUpdate.zip file</p>
+<p>a.   Unzip the <strong>TemenosUXP6_1_1__1Release_CustomUpdate.zip</strong> archive received.</p>
+<p>b.   Copy the <strong>jars</strong> from the archive into the <strong>lib</strong> folder of Temenos UXP.</p>
+</li>
+</ul>
+<p><img src="images/custom-update-copy.png" alt="copy custom update jars"></p>
+<p>   c.   Update <strong>Developer.lax</strong> file in order to add the jars copied in above step. See information from previous step.</p>
+<pre><code>  ;../lib/ecBuilder.jar;../lib/ecCustom.jar;../lib/org-netbeans-lib-cvsclient.jar;../lib/xpp3_min-1.1.4c.jar;../lib/xstream-1.4.9.jar
+</code></pre><ul>
+<li><p>Update the java extra parameters in Developer.lax:</p>
+<p>a.   LAX.NL.JAVA.OPTION.ADDITIONAL</p>
+<ul>
+<li><p>Please add below line:</p>
+<p>-Dconnect.options.expressionEvaluatorClass=com.acquire.util.js.FESIExpressionEvaluator</p>
+</li>
+<li><p>Please increase memory in order to avoid out of memory error. Add the following: </p>
+<p>-Xmx8000m</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/lax-nl-java.png" alt="lax nl java"></p>
+<p>   b.   LAX.NL.CURRENT.VM</p>
+<p>•   Please set JAVA 8 with the correspondent path:</p>
+<p><img src="images/lax-nl-current.png" alt="lax nl current"></p>
+<ul>
+<li>Open the Developer.exe </li>
+</ul>
+<h1 id="import-tcib20-retail-project">Import TCIB2.0 Retail project</h1>
+<ul>
+<li><p>Copy TCIB2.0 folder into <em>Your Folder</em> &gt; RTE &gt; Projects</p>
+</li>
+<li><p>Copy Retail jars from TCIB2.0\Solutions\Retail\WEB-INF\lib to <strong>lib</strong> folder of your Temenos UXP folder</p>
+</li>
+<li><p>Update <strong>Developer.lax</strong> file in order to add the jars from the Retail\WEB-INF\lib:</p>
+<pre><code> ;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/tcsecurity.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/tcommonjms.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/tcommonjdbc.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/tcommon.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/TC-Logging.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/TC-Hooks.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/TC-Custom.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/tcclient.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/tbrowser.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/ofsml.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/log4j-1.2.9.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/jmimemagic-0.1.4.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/cryptoIntegration.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/channels.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/autoform-search-4.2.0.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/autoform-download-4.2.0.jar;../RTE/Projects/TCIB2.0_201710.01/Solutions/Retail/WEB-INF/lib/apache-jakarta-oro.jar
+</code></pre><ul>
+<li>Now go to File &gt; Open</li>
+<li>Select the location of Retail.ipf file</li>
+</ul>
+</li>
+</ul>
+<p><img src="images/retail-ifp.png" alt="retail ifp"></p>
+<ul>
+<li>A warning will appear &gt; Accept language setup</li>
+<li><p>Open Process Builder:</p>
+<ul>
+<li>On top bar, click on &quot;No Perspective&quot; and select &quot;Process Builder&quot; (this will open UXP editors)</li>
+</ul>
+</li>
+<li><p>Set file location and server connection</p>
+<p>a.   On top bar, go to Tools &gt; Options</p>
+<p>b.   Select the appropriate file locations:</p>
+</li>
+</ul>
+<p><img src="images/uxp-file-locations.png" alt="uxp file locations"></p>
+<p>   c.   Go and update Retail.dsf file in order to replace &quot;<em><a href="http://localhost:9089">http://localhost:9089</a></em>&quot; with your own correspondent url. </p>
+<p><em>(There are 5 places to be replaced.)</em>
+<img src="images/retail-dsf-change.png" alt="retail dsf change"></p>
+<p>   d.   Select the appropriate server details (Go to Tools &gt; Options &gt; &quot;Server Connection&quot; tag):</p>
+<p>Server Address: <em>your own url</em></p>
+<p>Server Port: <em>your port</em> </p>
+<ul>
+<li>Close and open again the Developer.exe</li>
+<li>Run TCIB2.0 Retail from IDE:<ul>
+<li>go to Presentation Editor</li>
+<li>click right on Responsive &gt; Run</li>
+</ul>
+</li>
+<li>Login to TCIB</li>
+</ul>
+<p><img src="images/tcib-login.png" alt="tcib login"></p>
+<ul>
+<li>Agree to Terms and Conditions and press continue.</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>

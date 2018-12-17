@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Create T24 Customer Using Postman </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Create T24 Customer Using Postman ">
+    <meta name="generator" content="docfx 2.22.2.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/woocircle.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" class="Create T24 Customer Using Postman ">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar" role="navigation">
+          <div class="container">
+            <div class="row">
+              <div class="navbar-header col-md-2">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                
+                <a class="navbar-brand" href="/index.html">
+                  <img id="logo" src="/logo.png" alt="">
+                </a>
+              </div>
+        	   <div style="margin-left:28%">
+              <div class="themainmenu col-md-10">
+        	  </div>
+              <div class="collapse navbar-collapse" id="navbar">
+        		<div style="margin-right:28%">
+                <form class="navbar-form navbar-right" role="search" id="search">
+                  <div class="form-group">
+        			<input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                  </div>
+                </form>
+        		</div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="create-customer-with-prospect-iris">Create Customer with Prospect Iris</h1>
+
+<h2 id="headers-definitions-in-postman">Headers definitions in Postman:</h2>
+<p>Make sure you have set the following headers presets:</p>
+<ul>
+<li>Http Request Headers: <ul>
+<li>Accept: <em>&#39;Application/atom+xml&#39;</em><ul>
+<li>OR</li>
+</ul>
+</li>
+<li>Accept: <em>&#39;Application/hal+json&#39;</em></li>
+</ul>
+</li>
+<li>Http Response Headers:<ul>
+<li>Content-Type: <em>&#39;Application/atom+xml&#39;</em><ul>
+<li>OR</li>
+</ul>
+</li>
+<li>Content-Type: <em>&#39;Application/hal+json&#39;</em></li>
+</ul>
+</li>
+</ul>
+<h2 id="get-customer-collection">Get customer collection</h2>
+<ul>
+<li><p>Type the following URL request in order to see the list of available customers:</p>
+<p>  <code>https://your sandbox address/Prospect-iris/Prospect.svc/GB0010001/verCustomer_Inputs()</code></p>
+</li>
+</ul>
+<ul>
+<li>Make sure you have following parameters (input your sandbox username and password):</li>
+</ul>
+<p><img src="images/postman-get-customer.png" alt=""></p>
+<h2 id="create-new-customer-in-memory-generate-id">Create new customer in memory (generate Id)</h2>
+<ul>
+<li><p>Type the following URL request to create a customer and press <strong>SEND</strong>:</p>
+<p>  <code>https://your sandbox address/Prospect-iris/Prospect.svc/GB0010001/verCustomer_Inputs()/new</code></p>
+</li>
+<li><p>Make sure you have the following parameters (input your sandbox username and password):</p>
+</li>
+</ul>
+<p><img src="images/postman-create-customer.png" alt=""></p>
+<div class="NOTE"><h5>Note</h5><p>Keep in mind the customer Id number generated (<em>190245</em>)</p>
+</div>
+<h2 id="validate-new-customer-record">Validate new customer record</h2>
+<p>Follow below steps (see also image):</p>
+<ol>
+<li>Copy the content from body XML </li>
+<li>Paste it into Body (raw)</li>
+<li>In Body (raw) input mandatory data - see next point and example: &quot;Mandatory data details&quot;</li>
+<li>Change the request into <code>verCustomer_Inputs(190245)/validate</code></li>
+<li>Press SEND</li>
+</ol>
+<p><img src="images/postman-copy-content.png" alt=""></p>
+<h4 id="mandatory-data-details">Mandatory data details</h4>
+<p>Into the body (raw option) input following mandatory data parameters:</p>
+<p><strong>Example:</strong></p>
+<p>MNEMONIC:</p>
+<p><img src="images/postman-mnemonic.png" alt=""></p>
+<p>SHORT NAME:</p>
+<p><img src="images/postman-short-name.png" alt=""></p>
+<p>NAME1:</p>
+<p><img src="images/postman-name.png" alt=""></p>
+<p>SECTOR:</p>
+<p><img src="images/postman-sector.png" alt=""></p>
+<p>GENDER:</p>
+<p><img src="images/postman-gender.png" alt=""></p>
+<p>TITLE:</p>
+<p><img src="images/postman-title.png" alt=""></p>
+<p>GIVENNAMES:</p>
+<p><img src="images/postman-givennames.png" alt=""></p>
+<h2 id="create-new-customer-record-in-database">Create new customer record in database</h2>
+<ul>
+<li><p>After sending the validate request (from above), if the result is <strong>OK</strong> (status 200), you need to do again a <strong>POST</strong>:</p>
+<p> <code>https://your sandbox address/Prospect-iris/Prospect.svc/GB0010001/verCustomer_Inputs(&#39;190245&#39;)</code></p>
+</li>
+</ul>
+<p><img src="images/postman-post-created.png" alt=""></p>
+<h2 id="authorize-new-customer-record">Authorize new customer record</h2>
+<ul>
+<li><p>Go to Headers tag (on the same menu with <em>Cookies</em>) and copy the etag:</p>
+<p><img src="images/postman-etag.png" alt=""></p>
+</li>
+<li><p>Into Headers, add the key ‘If-Match’ and copy paste the ‘etag’ as below. </p>
+</li>
+<li>Change the request, from POST into PUT, and in order to authorize the record use the &#39;authorise&#39; command.</li>
+<li><p>In Authorization, change the Username (you need a different user to authorize the deal) </p>
+<p> <code>https://your sandbox address/Prospect-iris/Prospect.svc/GB0010001/verCustomer_Inputs(&#39;190245&#39;)/authorise</code></p>
+</li>
+<li><p>Status should be 200 <strong>OK</strong></p>
+<p><img src="images/postman-authorise.png" alt=""></p>
+</li>
+</ul>
+<h2 id="check-created-customer-record">Check created customer record</h2>
+<ul>
+<li><p>To check the record created in the database, go to BrowserWeb:</p>
+<p> <code>https://your sandbox address/BrowserWeb/servlet/BrowserServlet</code></p>
+</li>
+<li><p>Type CUSTOMER in the menu bar, press enter and in the new screen insert the customer ID created:</p>
+<p><img src="images/postman-check-record.png" alt=""></p>
+</li>
+</ul>
+<p><br></p>
+              <hr>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 footer-note left">
+              <p>
+                <a href="/"><img src="/logo-bottom.png" alt=""></a>
+                <a href="https://www.temenos.com/en/accessibility/">Accessibility</a>
+                <a href="https://www.temenos.com/en/legal-information/cookie-policy/">Cookie Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/privacy-policy/">Privacy Policy</a>
+                <a href="https://www.temenos.com/en/legal-information/terms-and-conditions/">Terms & Conditions</a>
+              </p>
+            </div>
+      
+            <div class="col-md-6 footer-note right">
+              <p>
+                Copyright &copy; 2017 Temenos Headquarters SA <span>&#183;</span>
+                <a target="_blank" href="https://www.facebook.com/TemenosGroup"><i class="fa fa-facebook" aria-hidden="true"></i></a> 
+                <a target="_blank" href="https://twitter.com/Temenos"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a target="_blank" href="http://www.linkedin.com/company/temenos"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a target="_blank" href="//plus.google.com/u/0/100035548059267323447?prsrc=3"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
+      
+        </div>
+      </footer>
+      
+      <div class="back-to-top">
+        <a href="#top">
+          <span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i></span>
+        </a>
+      </div>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    
+    
+    <script>
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myshareDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.sharedropbtn')) {
+    
+        var dropdowns = document.getElementsByClassName("sharedropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+    </script>
+    
+    <script>
+    	window.onload = function(){
+        	document.getElementById("shareFacebook").href = 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.toString();
+    
+        	document.getElementById("shareTwitter").href = 'https://twitter.com/intent/tweet?text=Temenos+Developer+Portal&url=' + window.location.toString();
+    
+        	document.getElementById("shareGoogle").href = 'https://plus.google.com/share?url=' + window.location.toString();
+    
+        	document.getElementById("shareLinkedin").href = 'https://www.linkedin.com/shareArticle?mini=true&url=' + window.location.toString() + '&title=Temenos+Developer+Portal&summary=&source=';
+    
+        	document.getElementById("shareEmail").href = 'mailto:' + window.location.toString();
+    	}
+    </script>
+    
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-38593742-4', 'auto');
+      ga('send', 'pageview');
+    
+    </script>  </body>
+</html>
